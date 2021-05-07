@@ -7,12 +7,17 @@ SPDX-License-Identifier: MIT-0
   <div class="container">
     <div>
       <Logo />
+
       <h1 class="title">Welcome to <strong>SaaS</strong> Land</h1>
       <div class="links">
         <a href="/blogs" class="button--green"> Blog </a>
+        <a href="/videos" class="button--grey"> Videos </a>
+        <a href="/learn" class="button--grey"> Learn </a>
         <a href="/patterns" class="button--grey"> Patterns </a>
         <a href="/about" class="button--green"> About </a>
       </div>
+
+      <Footer />
     </div>
   </div>
 </template>

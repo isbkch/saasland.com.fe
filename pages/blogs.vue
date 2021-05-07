@@ -13,6 +13,8 @@ SPDX-License-Identifier: MIT-0
           <Post :post="blog" />
         </li>
       </ul>
+
+      <Footer />
     </div>
   </div>
 </template>
