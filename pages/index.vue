@@ -1,30 +1,23 @@
+/*
+SPDX-FileCopyrightText: 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: MIT-0
+*/
+
 <template>
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        SaaS Land
-      </h1>
+      <h1 class="title">SaaS Land</h1>
       <div class="links">
-        <a
-          href="/blogs"
-          class="button--green"
-        >
-          Blog
-        </a>
-        <a
-          href="/patterns"
-          class="button--grey"
-        >
-          Patterns
-        </a>
+        <a href="/blogs" class="button--green"> Blog </a>
+        <a href="/patterns" class="button--grey"> Patterns </a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style>
@@ -38,16 +31,8 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

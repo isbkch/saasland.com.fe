@@ -1,38 +1,36 @@
 /*
-SPDX-FileCopyrightText: 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-FileCopyrightText: 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 SPDX-License-Identifier: MIT-0
 */
+
 <template>
   <div class="container">
     <div>
       <Logo />
-          <h1>SaaS on AWS - Recent Posts</h1>
+      <h1>SaaS on AWS - Recent Posts</h1>
       <ul>
         <li v-for="blog in blogPosts" :key="blog">
           <Post :post="blog" />
-          </li>
+        </li>
       </ul>
-
     </div>
   </div>
 </template>
 
 <script>
-
-import blogPosts from '../assets/content.json'
+import blogPosts from "../assets/content.json";
 
 export default {
-  name: 'App',
-  data(){
-    return{
-      blogPosts:[]
-    }
+  name: "App",
+  data() {
+    return {
+      blogPosts: [],
+    };
   },
-  mounted(){
-    this.blogPosts= blogPosts
+  mounted() {
+    this.blogPosts = blogPosts;
   },
-
-}
+};
 </script>
 
 <style>
@@ -46,16 +44,8 @@ export default {
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -75,8 +65,6 @@ export default {
   padding-top: 15px;
 }
 
-
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -85,20 +73,19 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-ul{display: relative;}
+ul {
+  display: relative;
+}
 
-li{
+li {
   width: 400px;
   display: inline-block;
   padding: 20px;
 
   top: 0px;
-  overflow:hidden;
-  border:solid 1px #eee;
-  margin: 10px;;
+  overflow: hidden;
+  border: solid 1px #eee;
+  margin: 10px;
   text-align: left;
 }
-
-
-
 </style>
