@@ -3,24 +3,20 @@
     <div>
       <Logo />
       <h1 class="title">
-        saasland.com
+        SaaS Land
       </h1>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/blogs"
           class="button--green"
         >
-          Documentation
+          Blog
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/patterns"
           class="button--grey"
         >
-          GitHub
+          Patterns
         </a>
       </div>
     </div>
