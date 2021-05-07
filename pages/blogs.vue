@@ -7,7 +7,7 @@ SPDX-License-Identifier: MIT-0
   <div class="container">
     <div>
       <Logo />
-      <h1>SaaS on AWS - Recent Posts</h1>
+      <h1>Check out our <strong>latest</strong> news & articles</h1>
       <ul>
         <li v-for="blog in blogPosts" :key="blog">
           <Post :post="blog" />

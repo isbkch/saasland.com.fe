@@ -9,10 +9,10 @@ SPDX-License-Identifier: MIT-0
     <div class="img-holder">
       <img :src="post.image" />
     </div>
-    <p>{{ post.intro }}</p>
     <p>
-      <strong>Published on {{ post.date }}, by {{ post.author }} </strong>
+      <strong>{{ post.date }}, by {{ post.author }} </strong>
     </p>
+    <p>{{ post.intro }}</p>
     <a :href="post.link"> Read article</a>
   </div>
 </template>
