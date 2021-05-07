@@ -7,15 +7,12 @@ SPDX-License-Identifier: MIT-0
   <div class="container">
     <div>
       <Logo />
-
-      <h1 class="title">Welcome to <strong>SaaS</strong> Land</h1>
-      <div class="links">
-        <a href="/blogs" class="button--green"> Blog </a>
-        <a href="/videos" class="button--grey"> Videos </a>
-        <a href="/learn" class="button--green"> Learn </a>
-        <a href="/patterns" class="button--grey"> Patterns </a>
-        <a href="/about" class="button--green"> About </a>
-      </div>
+      <h1>SaaS <strong>Patterns</strong> Collection</h1>
+      <ul>
+        <li v-for="pattern in saasPatterns" :key="pattern">
+          <Pattern :post="pattern" />
+        </li>
+      </ul>
 
       <Footer />
     </div>
@@ -23,7 +20,19 @@ SPDX-License-Identifier: MIT-0
 </template>
 
 <script>
-export default {};
+import saasPatterns from "../assets/content.json";
+
+export default {
+  name: "App",
+  data() {
+    return {
+      saasPatterns: [],
+    };
+  },
+  mounted() {
+    this.saasPatterns = saasPatterns;
+  },
+};
 </script>
 
 <style>
@@ -56,5 +65,29 @@ export default {};
 
 .links {
   padding-top: 15px;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+ul {
+  display: relative;
+}
+
+li {
+  width: 400px;
+  display: inline-block;
+  padding: 20px;
+
+  top: 0px;
+  overflow: hidden;
+  border: solid 1px #eee;
+  margin: 10px;
+  text-align: left;
 }
 </style>
