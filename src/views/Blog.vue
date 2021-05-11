@@ -15,15 +15,6 @@
             <Post :post="blog" />
           </li>
         </ul>
-        <!-- <div class="row row-grid mt-5">
-          <div
-            class="col-lg-4 blog-posts"
-            v-for="blog in blogPosts"
-            :key="blog"
-          >
-            <Post :post="blog" />
-          </div>
-        </div> -->
       </div>
     </section>
   </div>
