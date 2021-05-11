@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BlogHeader />
+    <BlogBanner />
 
     <section class="section section-shaped my-0 overflow-hidden">
       <div class="shape shape-style-3 bg-gradient-default shape-skew">
@@ -21,14 +21,14 @@
 </template>
 
 <script>
-import BlogHeader from "./components/BlogHeader";
+import BlogBanner from "./components/BlogBanner";
 import Post from "./components/Post";
 import blogPosts from "../assets/content.json";
 
 export default {
   name: "blog",
   components: {
-    BlogHeader,
+    BlogBanner,
     Post,
   },
   data() {

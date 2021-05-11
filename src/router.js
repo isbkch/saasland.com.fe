@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
-import Components from "./views/Components.vue";
+import About from "./views/About.vue";
 import Landing from "./views/Landing.vue";
 import Blog from "./views/Blog.vue";
 import Profile from "./views/Profile.vue";
@@ -31,11 +31,11 @@ export default new Router({
       }
     },
     {
-      path: "/components",
-      name: "components",
+      path: "/about",
+      name: "about",
       components: {
         header: AppHeader,
-        default: Components,
+        default: About,
         footer: AppFooter
       }
     },
