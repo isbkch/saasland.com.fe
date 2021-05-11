@@ -18,14 +18,9 @@
         <div class="col px-0">
           <div class="row justify-content-center align-items-center">
             <div class="col-lg-7 text-center">
-              <img
-                src="img/brand/white.png"
-                style="width: 200px"
-                class="img-fluid"
-              />
-              <p class="lead text-white mt-4 mb-5">
+              <h3>
                 Check out our <strong>latest</strong> news & articles
-              </p>
+              </h3>
             </div>
           </div>
         </div>
