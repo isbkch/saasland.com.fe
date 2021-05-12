@@ -187,7 +187,7 @@
 <script>
 import AboutBanner from "./components/AboutBanner";
 import Post from "./components/Post";
-import blogPosts from "../assets/content.json";
+import blogPosts from "../assets/blog-content.json";
 
 export default {
   name: "blog",
