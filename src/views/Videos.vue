@@ -23,7 +23,7 @@
 <script>
 import VideosBanner from "./components/VideosBanner";
 import Video from "./components/Video";
-import videoPosts from "../assets/videos.json";
+import videoPosts from "../assets/videos-content.json";
 
 export default {
   name: "videos",
