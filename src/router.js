@@ -3,6 +3,7 @@ import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 import About from "./views/About.vue";
+import Videos from "./views/Videos.vue";
 import Landing from "./views/Landing.vue";
 import Blog from "./views/Blog.vue";
 import Profile from "./views/Profile.vue";
@@ -27,6 +28,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Blog,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/videos",
+      name: "videos",
+      components: {
+        header: AppHeader,
+        default: Videos,
         footer: AppFooter
       }
     },
