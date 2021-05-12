@@ -19,7 +19,6 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <h1 class="display-3  text-white">Welcome to <strong>SaaS</strong> Land
-                                    <span>completed with examples</span>
                                 </h1>
                                 <p class="lead  text-white">This site brings together all the latest blogs, videos, and training for SaaS on AWS. Learn to use and build full SaaS solutions that scale automatically on low-cost, fully-managed architecture.</p>
                                 <div class="btn-wrapper">
