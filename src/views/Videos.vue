@@ -12,7 +12,7 @@
       <div class="container pb-300 video-posts">
         <ul class="row row-grid mt-5">
           <li class="col-lg-4 video-posts" v-for="video in videoPosts" :key="video">
-            <Post :post="video" />
+            <Video :video="video" />
           </li>
         </ul>
       </div>
@@ -22,14 +22,14 @@
 
 <script>
 import VideosBanner from "./components/VideosBanner";
-import Post from "./components/Post";
+import Video from "./components/Video";
 import videoPosts from "../assets/videos.json";
 
 export default {
   name: "videos",
   components: {
     VideosBanner,
-    Post,
+    Video,
   },
   data() {
     return {
