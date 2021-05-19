@@ -1,23 +1,24 @@
-const webpack = require('webpack');
-
 module.exports = {
-  configureWebpack: {
-    // Set up all the aliases we use in our app.
-    plugins: [
-      new webpack.optimize.LimitChunkCountPlugin({
-        maxChunks: 6
-      })
-    ]
+  chainWebpack: config=>{
+    config.plugins.delete('prefetch')
   },
+  "transpileDependencies": [
+    "vuetify"
+  ],
+  productionSourceMap: false,
   pwa: {
-    name: 'SaaS Land FE',
-    themeColor: '#172b4d',
-    msTileColor: '#172b4d',
+    name: 'SaaS Builder',
+    workboxPluginMode: 'InjectManifest',
+    themeColor: '#4A90E2',
+    msTileColor: '#4A90E2',
     appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: '#172b4d'
-  },
-  css: {
-    // Enable CSS source maps.
-    sourceMap: process.env.NODE_ENV !== 'production'
+    appleMobileWebAppStatusBarStyle: 'black',
+    manifestOptions: {
+      background_color: "#ffffff"
+    },
+    workboxOptions: {
+      swSrc: './src/sw.js',
+      swDest: 'service-worker.js',
+    },
   }
-};
+}

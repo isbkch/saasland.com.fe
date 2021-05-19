@@ -1,229 +1,78 @@
-<template>
-  <div>
-    <AboutBanner />
 
-    <section class="section section-lg">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-lg">
-          <div class="col-lg-8">
-            <p class="lead text-muted">
-              According to the National Oceanic and Atmospheric Administration,
-              Ted, Scambos, NSIDClead scentist, puts the potentially record
-              maximum.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <div class="px-4">
-              <img
-                v-lazy="'img/theme/team-1-800x800.jpg'"
-                class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                style="width: 200px"
-              />
-              <div class="pt-4 text-center">
-                <h5 class="title">
-                  <span class="d-block mb-1">Ryan Tompson</span>
-                  <small class="h6 text-muted">Web Developer</small>
-                </h5>
-                <div class="mt-3">
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="warning"
-                    icon="fa fa-twitter"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="warning"
-                    icon="fa fa-facebook"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="warning"
-                    icon="fa fa-dribbble"
-                    rounded
-                    icon-only
-                  ></base-button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <div class="px-4">
-              <img
-                v-lazy="'img/theme/team-2-800x800.jpg'"
-                class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                style="width: 200px"
-              />
-              <div class="pt-4 text-center">
-                <h5 class="title">
-                  <span class="d-block mb-1">Romina Hadid</span>
-                  <small class="h6 text-muted">Marketing Strategist</small>
-                </h5>
-                <div class="mt-3">
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="primary"
-                    icon="fa fa-twitter"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="primary"
-                    icon="fa fa-facebook"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="primary"
-                    icon="fa fa-dribbble"
-                    rounded
-                    icon-only
-                  ></base-button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <div class="px-4">
-              <img
-                v-lazy="'img/theme/team-3-800x800.jpg'"
-                class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                style="width: 200px"
-              />
-              <div class="pt-4 text-center">
-                <h5 class="title">
-                  <span class="d-block mb-1">Alexander Smith</span>
-                  <small class="h6 text-muted">UI/UX Designer</small>
-                </h5>
-                <div class="mt-3">
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="info"
-                    icon="fa fa-twitter"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="info"
-                    icon="fa fa-facebook"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="info"
-                    icon="fa fa-dribbble"
-                    rounded
-                    icon-only
-                  ></base-button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <div class="px-4">
-              <img
-                v-lazy="'img/theme/team-4-800x800.jpg'"
-                class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                style="width: 200px"
-              />
-              <div class="pt-4 text-center">
-                <h5 class="title">
-                  <span class="d-block mb-1">John Doe</span>
-                  <small class="h6 text-muted">Founder and CEO</small>
-                </h5>
-                <div class="mt-3">
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="success"
-                    icon="fa fa-twitter"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="success"
-                    icon="fa fa-facebook"
-                    rounded
-                    icon-only
-                  ></base-button>
-                  <base-button
-                    tag="a"
-                    href="#"
-                    type="success"
-                    icon="fa fa-dribbble"
-                    rounded
-                    icon-only
-                  ></base-button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+<template>
+  <v-content class="px-0 mx-0 pt-5">
+    <v-container fluid class="px-0 pt-5 mt-5 py-0">
+      <v-row justify="center" align="center">
+        <v-col md="11" lg="10" sm="11" xs="12" class="pt-3">
+          <aboutHeader />
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-container fluid class="px-0 py-0">
+      <v-row justify="center" align="center">
+        <v-col md="11" lg="10" sm="11" xs="12" class>
+          <aboutCommunity :data="config.generalConfig" />
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-container fluid class="pa-0 py-0 my-0">
+      <v-row
+        justify="center"
+        align="center"
+        :class="this.$vuetify.theme.dark == true?'grey darken-4':'grey lighten-4'"
+        class="py-5"
+      >
+        <v-col md="11" lg="10" sm="11" xs="12" class="py-0">
+          <communityGuidelines :data="communityGudielines" />
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-container fluid class="pa-0 py-0 my-0">
+      <v-row justify="center" align="center" class="py-5">
+        <v-col md="11" lg="10" sm="11" xs="12" class="py-0 mb-5">
+          <coc :data="coc" />
+          <antiHarassmentPolicy :data="config.generalConfig.shortName || config.generalConfig.name" />
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-content>
 </template>
 
 <script>
-import AboutBanner from "./components/AboutBanner";
-import Post from "./components/Post";
-import blogPosts from "../assets/blog-content.json";
+import service from "@/services/appservices";
+import { mapState } from "vuex";
 
 export default {
-  name: "blog",
   components: {
-    AboutBanner,
-    Post,
+    aboutCommunity: () => import("@/components/about/AboutCommunity"),
+    aboutHeader: () => import("@/components/about/AboutHeader"),
+    communityGuidelines: () => import("@/components/about/CommunityGuidelines"),
+    coc: () => import("@/components/about/COC"),
+    antiHarassmentPolicy: () => import("@/components/about/AntiHar")
   },
-  data() {
-    return {
-      blogPosts: [],
-    };
+  computed: {
+    ...mapState(["config"])
   },
+  data: () => ({
+    loading: true,
+    communityGudielines: [],
+    coc: ""
+  }),
   mounted() {
-    this.blogPosts = blogPosts;
+    this.getCommunityGuidelinesData();
   },
+  methods: {
+    getCommunityGuidelinesData() {
+      service.getCommunityGuidelines().then(res => {
+        if (res.success) {
+          this.coc = res.data.codeOfConduct;
+          this.communityGudielines = res.data.communityGuidelines;
+        }
+      });
+    }
+  }
 };
 </script>
-
-<style>
-.blog-posts .links {
-  padding-top: 15px;
-}
-
-.blog-posts ul {
-  display: relative;
-}
-
-.blog-posts li {
-  width: 400px;
-  display: inline-block;
-  padding: 20px;
-
-  top: 0px;
-  overflow: hidden;
-  border: solid 1px #eee;
-  margin: 0px;
-  text-align: left;
-}
-</style>

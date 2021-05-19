@@ -1,199 +1,174 @@
-<h1 id="argon-design-system"><a href="https://www.creative-tim.com/product/vue-argon-design-system">Vue Argon Design System</a></h1>
+# Aura v3
 
-<p><img src="https://s3.amazonaws.com/creativetim_bucket/products/92/original/opt_argon_vue_thumbnail.jpg?1534236902" alt="Product Gif" /></p>
+<img src="https://github.com/GDG-Jalandhar/WebsiteData/blob/master/Aura%20Main%20v3%20Dark%20.png?raw=true" width="420em"><img src="https://github.com/GDG-Jalandhar/WebsiteData/blob/master/Aura%20Main%20v3%20Light.png?raw=true" width="420em">
 
-<p>Start your development with a Design System for Bootstrap 4. It is open source, free and it features many components that can help you create amazing websites.</p>
+[![MadeWithVueJs.com shield](https://madewithvuejs.com/storage/repo-shields/1444-shield.svg)](https://madewithvuejs.com/p/aura/shield-link)
 
-<h4 id="fully-coded-components">Fully Coded Components</h4>
 
-<p>Vue Argon Design System is built with over 100 individual components, giving you the freedom of choosing and combining. All components can take variations in colour, that you can easily modify using SASS files.</p>
+Standard Web App for Tech Communties. <br>
+[Demo](https://myaurapp.web.app/) <br>
+Version: 3.1.1
 
-<p>You will save a lot of time going from prototyping to full-functional code, because all elements are implemented. This Design System is coming with prebuilt examples, so the development process is seamless, switching from our pages to the real website is very easy to be done.</p>
+### Show some :heart: and star the repo to support the project
+### If you are using Aura, Kindly [fill this form](https://forms.gle/SNpajdAnqbSac2AV9) for Aura Web App Directory
 
-<p>Every element has multiple states for colors, styles, hover, focus, that you can easily access and use.</p>
+## Overview
 
-<h4 id="complex-documentation">Complex Documentation</h4>
+Aura is the Web App that helps you to mange the Tech Communities like GDGs, DSCs or any other tech communities with Aura Admin.
 
-<p>Each element is well presented in a very complex documentation. You can read more about the idea behind this design system here. You can check the components here and the foundation here.</p>
+## Features
+| Feature | Description |
+|---|---|
+| **Fast and optimized** | PWA on Lighthouse |
+| **Works offline** | Can work offline |
+| **Dark/Light Theme Mode** | Light/Dark Theme Mode |
+| **Mobile first** | Mobo Friendly Web app can be installed as a native app on your phone |
+| **SEO optimized** | index all content and get to the top in search results |
+| **Easy in management** | Easy in Management by using Aura Admin |
+| **Trigger Push Notification** | Trigger Push Notification to Aura Main |
+| **Usability** | Any Tech Communities can use |
+| **Custom Event Page** | Now No need to create the website for XYZ event |
+| **Public shareable URL for Team & Speakers** | Team member public URL for Self Branding and Public Speaker Directory & Public URL for Promotion |
 
-<h4 id="example-pages">Example Pages</h4>
 
-<p>If you want to get inspiration or just show something directly to your clients, you can jump start your development with our pre-built example pages. You will be able to quickly set up the basic structure for your web project.</p>
+The template is created by [GDG Jalandhar](https://meetup.com/GDG-Jalandhar/) team experience of running meetups/events.
 
-<h2 id="table-of-contents">Table of Contents</h2>
+## Getting Started
 
-<ul>
-  <li><a href="#demo">Demo</a></li>
-  <li><a href="#quick-start">Quick Start</a></li>
-  <li><a href="#documentation">Documentation</a></li>
-  <li><a href="#file-structure">File Structure</a></li>
-  <li><a href="#browser-support">Browser Support</a></li>
-  <li><a href="#resources">Resources</a></li>
-  <li><a href="#reporting-issues">Reporting Issues</a></li>
-  <li><a href="#technical-support-or-questions">Technical Support or Questions</a></li>
-  <li><a href="#licensing">Licensing</a></li>
-  <li><a href="#useful-links">Useful Links</a></li>
-</ul>
+1. [Fork this repository](https://github.com/gdg-x/aura/fork) & [Aura Admin](https://github.com/gdg-x/aura-admin/fork) (Important) and clone both repo locally
+1 To Setup `Aura Main` follow this and to setup [Aura Admin](https://github.com/gdg-x/aura-admin)
+1. Use same [Firebase account](https://console.firebase.google.com) project for both `Admin` & `Aura Main`
+1. Setup Environment
+    - Install [Node.js (v8.9.4 or above)](https://nodejs.org/en/download/)
+    - Install vue cli: `npm install -g @vue/cli`
+1. Install project dependencies: `npm install` 
+1. Create [Firebase account](https://console.firebase.google.com) and Create a new Project if you have not any (Kindly use same project for both repo ([Aura Admin](https://github.com/gdg-x/aura-admin) & [Aura Main](https://github.com/gdg-x/aura)))
+1. Go to Firebase Project Dashboard
+1. Go to Cloud Firestore Database and Enable the database in test mode
+1. Update the Rule
+    ```js
+    rules_version = '2';
+    service cloud.firestore {
+        match /databases/{database}/documents {
+            match /apiEnd/{apiEndpoint}{
+                allow read, create : if true;
+              allow delete : if request.auth.uid != null;
+              allow update : if request.auth.uid != null;
+              allow list: if request.auth.uid != null;
+            }
+            match /{document=**} {
+              allow read : if true;
+              allow delete : if request.auth.uid != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.userType == "Super Admin";
+              allow create : if request.auth.uid != null;
+              allow update : if request.auth.uid != null;
+            }
+        }
+    }
+    ```
+1. In the Firebase project console dashboard. Click on create new web app
+1. Go to Firebase project Settings and then General Settings Tab
+1. Scroll down and go to your app section under Firebase SDK snippet
+1. Now click on the config
+1. Copy the code which looks similar to the below sample
+    ```js
+    apiKey: "Axxxxxxxxxxxxxxxxxxx",
+    authDomain: "xxxxxx.firebaseapp.com",
+    databaseURL: "https://xxxxxxxx.firebaseio.com",
+    projectId: "xxxxxxxxx",
+    storageBucket: "xxxxxxx.appspot.com",
+    messagingSenderId: "xxxxxxxxxxx",
+    appId: "1:xxxxxxxxx:web:xxxxxxx"
+    ```
+1. Now goto project code and inside [src/config/](https://github.com/gdg-x/aura/blob/master/src/config/firebase.js) update the `firebase.js` file with these codes
+1. Update the field name in [vue.config](https://github.com/gdg-x/aura/blob/master/vue.config.js)
+1. Run locally
+    - `npm run serve`
+    - For the First Time you will see a text Either `Your Internet is not Working or Site is not Configured`
+1. For the production: `npm run build` and then one dir will be created dist
+1. For testing: `npm run test`
+1. Setup [Aura Admin](https://github.com/gdg-x/aura-admin/fork) for Management of Aura v3
 
-<h2 id="demo">Demo</h2>
+## Deployment on Firebase
+1. Install required tools for performing Firebase deployment
+    - Install Firebase CLI: `npm i -g firebase-tools`
+1. Login into Firebase CLI using the following command -  `firebase login`
+1. Open Terminal/CMD/Powershell in the root directory of your clone of aura-admin repository.
+1. Now type `firebase login` command in your Terminal/CMD/Powershell
+1. Update the `Firebase Project ID` in `.firebasesrc` file. This value should match the project ID in your Project Settings of the Firebase project you created in the previous section.
+1. Go to the Firebase Console Dashboard and Click on Hosting in the left navigation.
+1. Click on Get Started
+1. Click through all steps till you’re taken to the Hosting page in the console.
+1. You’ll be provided with a ready domain with your project ID. It should look like - `<project-id>.web.app or <project-id>.firebaseapp.com`
+1. Copy the sub-domain name of the URL provided. In this case, it will be the project ID. However, to be precise, you have to copy the part before .web.aap or .firebaseapp.com. This is your Site ID
+1. Update `Firebase.json` file, set the site key to Site ID
+    ```js
+        {
+            "hosting": {
+                "site":"Your_Firebase_Hosting_id",
+                "public": "dist",
+                "rewrites": [ {
+                    "source": "**",
+                    "destination": "/index.html"
+                } ],
+                "ignore": [
+                    "firebase.json",
+                    "**/.*",
+                    "**/node_modules/**"
+                ]
+            }
+        }
+    ```
+1. In your terminal at the root directory of the project,  build and deploy using the following command     
+    - `firebase deploy`
 
-<ul>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system">Index Page</a></li>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system/#/landing">Landing page</a></li>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system/#/profile">Profile Page</a></li>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system/#/login">Login Page</a></li>
-  <li><a href="https://demos.creative-tim.com/vue-argon-design-system/#/register">Register Page</a></li>
-</ul>
 
-<p><a href="https://demos.creative-tim.com/argon-design-system">View More</a></p>
 
-<h2 id="quick-start">Quick start</h2>
 
-<ul>
-  <li><a href="https://github.com/creativetimofficial/vue-argon-design-system/archive/master.zip">Download from Github</a>.</li>
-  <li><a href="https://www.creative-tim.com/product/vue-argon-design-system">Download from Creative Tim</a>.</li>
-  <li>Clone the repo: <code class="highlighter-rouge">git clone https://github.com/creativetimofficial/vue-argon-design-system.git</code>.</li>
-</ul>
+### Documentation
+1. [Full documentation](https://docs.google.com/document/d/18jKhG10OZx1T87ey8rtLYjyPpjPTCqPfX3JiOs3PUcs/edit?usp=sharing).
 
-<h2 id="documentation">Documentation</h2>
 
-<p>The documentation for the Vue Argon Design System is hosted at our <a href="https://demos.creative-tim.com/vue-argon-design-system">website</a>.</p>
+## Technology Stack
 
-<h2 id="file-structure">File Structure</h2>
+* [VueJS](https://vuejs.org/)
+* [Vuetify](https://vuetifyjs.com/en/)
+* [Firebase](https://firebase.google.com/)
+* [Service Worker & PWA](https://www.npmjs.com/package/vue-pwa)
+* [Workbox](https://developers.google.com/web/tools/workbox)
 
-<p>Within the download you’ll find the following directories and files:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>argon/
-|-- vue-argon-design-system
-    |-- App.vue
-    |-- main.js
-    |-- router.js
-    |-- assets
-    |   |-- scss
-    |   |   |-- argon.scss
-    |   |   |-- bootstrap
-    |   |   |-- custom
-    |   |-- vendor
-    |       |-- font-awesome
-    |       |   |-- css
-    |       |   |   |-- font-awesome.css
-    |       |   |   |-- font-awesome.min.css
-    |       |   |-- fonts
-    |       |       |-- FontAwesome.otf
-    |       |       |-- fontawesome-webfont.eot
-    |       |       |-- fontawesome-webfont.svg
-    |       |       |-- fontawesome-webfont.ttf
-    |       |       |-- fontawesome-webfont.woff
-    |       |       |-- fontawesome-webfont.woff2
-    |       |-- nucleo
-    |           |-- css
-    |           |   |-- nucleo-svg.css
-    |           |   |-- nucleo.css
-    |           |-- fonts
-    |               |-- nucleo-icons.eot
-    |               |-- nucleo-icons.svg
-    |               |-- nucleo-icons.ttf
-    |               |-- nucleo-icons.woff
-    |               |-- nucleo-icons.woff2
-    |-- components
-    |   |-- Badge.vue
-    |   |-- BaseButton.vue
-    |   |-- BaseCheckbox.vue
-    |   |-- BaseInput.vue
-    |   |-- BaseNav.vue
-    |   |-- BaseRadio.vue
-    |   |-- BaseSlider.vue
-    |   |-- BaseSwitch.vue
-    |   |-- Card.vue
-    |   |-- CloseButton.vue
-    |   |-- Icon.vue
-    |   |-- NavbarToggleButton.vue
-    |-- layout
-    |   |-- AppFooter.vue
-    |   |-- AppHeader.vue
-    |-- plugins
-    |   |-- argon-kit.js
-    |   |-- globalComponents.js
-    |   |-- globalDirectives.js
-    |-- views
-        |-- Components.vue
-        |-- Landing.vue
-        |-- Login.vue
-        |-- Profile.vue
-        |-- Register.vue
-        |-- components
-            |-- BasicElements.vue
-            |-- Carousel.vue
-            |-- CustomControls.vue
-            |-- DownloadSection.vue
-            |-- Examples.vue
-            |-- Icons.vue
-            |-- Inputs.vue
-            |-- JavascriptComponents.vue
-            |-- Navigation.vue
 
-</code></pre></div></div>
+## Contributing
 
-<h2 id="browser-support">Browser Support</h2>
+Awesome! Contributions of all kinds are greatly appreciated. To help smoothen the process we have a few non-exhaustive guidelines to follow which should get you going in no time.
 
-<p>At present, we officially aim to support the last two versions of the following browsers:</p>
+### Using GitHub Issues
 
-<p><img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64" />
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64" />
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64" />
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64" />
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64" /></p>
+- Feel free to use GitHub issues for questions, bug reports, and feature requests
+- Use the search feature to check for an existing issue
+- Include as much information as possible and provide any relevant resources (Eg. screenshots)
+- For bug reports ensure you have a reproducible test case
+ - A pull request with a breaking test would be super preferable here but isn't required
 
-<h2 id="resources">Resources</h2>
+### Submitting a Pull Request
 
-<ul>
-  <li>Demo: <a href="https://demos.creative-tim.com/argon-design-system">https://demos.creative-tim.com/vue-argon-design-system</a></li>
-  <li>Download: <a href="https://www.creative-tim.com/product/vue-argon-design-system">https://www.creative-tim.com/product/vue-argon-design-system</a></li>
-  <li>License Agreement: <a href="https://www.creative-tim.com/license">https://www.creative-tim.com/license</a></li>
-  <li>Support: <a href="https://www.creative-tim.com/contact-us">https://www.creative-tim.com/contact-us</a></li>
-  <li>Issues: <a href="https://github.com/creativetimofficial/vue-argon-design-system/issues">Github Issues Page</a></li>
-</ul>
+- Squash commits
+- Lint your code with eslint (config provided)
+- Include relevant test updates/additions
+- Pull requests _must_ be made against `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
 
-<h2 id="reporting-issues">Reporting Issues</h2>
+## Contributors
+<b>Maintainer:</b> [Vrijraj Singh](https://github.com/vrijraj) <br>
+<b>Developers:</b> [Vrijraj Singh](https://github.com/vrijraj) &  [Bharat Agarwal](https://github.com/bharatagsrwal) 
 
-<p>We use GitHub Issues as the official bug tracker for the Vue Argon Design System. Here are some advices for our users that want to report an issue:</p>
+### View Website Built with Projects
 
-<ol>
-  <li>Make sure that you are using the latest version of the Vue Argon Design System. Check the CHANGELOG from your copy on our <a href="https://www.creative-tim.com">website</a>.</li>
-  <li>Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.</li>
-  <li>Some issues may be browser specific, so specifying in what browser you encountered the issue might help.</li>
-</ol>
+| Community Name | Web App Link |
+| --- | --- |
+| GDG Jalandhar | [View Now](https://gdgjalandhar.com) |
+| DSC NSEC | [View Now](https://dscnsec.com) |
+| GDG Konya | [View Now](https://gdgkonya.com) |
 
-<h2 id="technical-support-or-questions">Technical Support or Questions</h2>
 
-<p>If you have questions or need help integrating the product please <a href="https://www.creative-tim.com/contact-us">contact us</a> instead of opening an issue.</p>
-
-<h2 id="licensing">Licensing</h2>
-
-<ul>
-  <li>
-    <p>Copyright © 2018 Creative Tim (https://www.creative-tim.com)</p>
-  </li>
-  <li>
-    <p>Licensed under MIT (https://github.com/creativetimofficial/vue-argon-design-system/blob/master/LICENSE.md)</p>
-  </li>
-</ul>
-
-<h2 id="useful-links">Useful Links</h2>
-
-<ul>
-  <li><a href="https://www.creative-tim.com/bootstrap-themes">More products</a> from Creative Tim</li>
-  <li><a href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w">Tutorials</a></li>
-  <li><a href="https://www.creative-tim.com/bootstrap-themes/free">Freebies</a> from Creative Tim</li>
-  <li><a href="https://www.creative-tim.com/affiliates/new">Affiliate Program</a> (earn money)</li>
-</ul>
-
-<h2 id="social-media">Social Media</h2>
-
-<ul>
-  <li>Twitter: <a href="https://twitter.com/CreativeTim">https://twitter.com/CreativeTim</a></li>
-  <li>Facebook: <a href="https://www.facebook.com/CreativeTim">https://www.facebook.com/CreativeTim</a></li>
-  <li>Dribbble: <a href="https://dribbble.com/creativetim">https://dribbble.com/creativetim</a></li>
-  <li>Google+: <a href="https://plus.google.com/+CreativetimPage">https://plus.google.com/+CreativetimPage</a></li>
-  <li>Instagram: <a href="https://www.instagram.com/CreativeTimOfficial">https://www.instagram.com/CreativeTimOfficial</a></li>
-</ul>
+## Facing Any Problem or need any Help?
+Write us in [issues](https://github.com/gdg-x/aura/issues) section. Our team will try solve your issue within 10-12 hours.<br>
