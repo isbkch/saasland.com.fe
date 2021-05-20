@@ -21,28 +21,28 @@
           style="font-weight: 350;font-size:230%"
         >
           <b>
-            Make good things
+            Build SaaS apps
             <span style="color: #1a73e8;">together</span>.
           </b>
         </p>
         <p class="google-font mt-0 mb-0" style="font-size:150%">{{config.generalConfig.name}}</p>
         <p class="google-font" style="font-size:100%">{{config.generalConfig.shortDescription}}</p>
         <p class="google-font" style="font-size:100%;color:#9e9e9e">
-          <span v-for="(item,i) in config.generalConfig.hashtags" :key="i">
+          <span v-for="(item,i) in hashtags" :key="i">
             <v-chip
-              :href="'https://twitter.com/hashtag/'+item"
+              :href="'https://twitter.com/hashtag/'+item.tag"
               rel="noreferrer"
               target="_blank"
               small
               class="mr-1"
-            >#{{item}}</v-chip>
+            >#{{item.tag}}</v-chip>
             <!-- &nbsp; -->
           </span>
         </p>
 
         <v-btn
-          v-if="checkExistance(config.generalConfig.becomemember,0)"
-          :href="config.generalConfig.becomemember"
+          v-if="checkExistance(config.generalConfig.becomeMemberLink,0)"
+          :href="config.generalConfig.becomeMemberLink"
           target="_blank"
           rel="noreferrer"
           aria-label="Become a Member"
@@ -68,10 +68,15 @@
 </template>
 
 <script>
+import hashtags from "@/assets/data/hashtags.json";
+import config from "@/assets/data/config.json";
 import { mapState } from "vuex";
 
 export default {
-  data: () => ({}),
+  data: () => ({
+    hashtags: hashtags,
+    config: config
+  }),
   computed: {
     ...mapState(["config"])
   }

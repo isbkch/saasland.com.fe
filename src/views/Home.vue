@@ -100,7 +100,7 @@ export default {
     showFeatureEventStatus: false,
   }),
   mounted() {
-    this.getFeaturesEventID();
+    // this.getFeaturesEventID();
   },
   computed: {
     ...mapState(["config"]),

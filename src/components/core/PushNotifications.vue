@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import firebase from "@/config/firebase";
+
 import { mapState } from "vuex";
 export default {
   name: "PushNotification",
@@ -55,70 +55,7 @@ export default {
 
   methods: {
     requestPermission() {
-      try {
-        if (firebase.notificationSupported && Notification) {
-          firebase.messaging.usePublicVapidKey(
-            `${this.config.keysandsecurity.web_push_certificate}`
-          );
-          this.isLoading = true;
-          this.token = "Please wait...";
-          Notification.requestPermission().then(permission => {
-            if (permission === "granted") {
-              let token = localStorage.getItem("pushNotificationToken");
-              if (token == null || token.length <= 0) {
-                firebase.messaging
-                  .getToken({vapidKey:this.config.keysandsecurity.web_push_certificate})
-                  .then(currentToken => {
-                    if (currentToken) {
-                      firebase.firestore
-                        .collection("apiEnd")
-                        .add({
-                          token: currentToken
-                        })
-                        .then(() => {
-                          this.token = "Successfully Subscribed";
-                          // alert("SuccessFully Subscribed");
-                          this.displayNotificaion();
-                          localStorage.setItem(
-                            "pushNotificationToken",
-                            currentToken
-                          );
-                          this.isLoading = false;
-                          this.buttonText = "Allowed";
-                        })
-                        .catch(err => {
-                          this.token = err;
-                          this.isLoading = false;
-                        });
-                    } else {
-                      this.isLoading = false;
-                      this.token =
-                        "No Instance ID token available. Request permission to generate one.";
-                    }
-                  })
-                  .catch(err => {
-                    this.isLoading = false;
-                    this.token = err;
-                  });
-              } else {
-                this.token = "Already Subscribed";
-                this.isLoading = false;
-                this.buttonText = "Allowed";
-              }
-            } else {
-              this.isLoading = false;
-              this.token = "Unable to get permission to notify.";
-            }
-          });
-        } else {
-          this.isLoading = false;
-          this.token = "We Don't Support your browser";
-        }
-      } catch (err) {
-        // alert(err);
-        this.isLoading = false;
-        this.token = err;
-      }
+      // ...
     },
     displayNotificaion() {
       if ("serviceWorker" in navigator) {

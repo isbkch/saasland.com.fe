@@ -6,8 +6,8 @@
         <p
           class="google-font mt-0"
           style="font-size:95%"
-        >Google Developer Groups (GDGs) are for developers who are interested in Google's developer technology.</p>
-        <p class="google-font" style="font-size:95%">About different Google technologies</p>
+        >SaaS Builder is for developers who are interested in building and deploying SaaS workloads on AWS.</p>
+        <p class="google-font" style="font-size:95%">We leverage different AWS technologies</p>
         <span v-for="(item,i) in whatwedodata" :key="i">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
@@ -33,27 +33,27 @@
             </v-col>
             <v-col md="3" lg="3" sm="6" cols="6" class="text-center pa-2">
               <v-icon large style="font-size:300%">mdi-code-tags</v-icon>
-              <p class="google-font mt-2" style="font-size:130%">Codelabs</p>
+              <p class="google-font mt-2" style="font-size:130%">Workshops</p>
               <p
                 class="google-font"
                 style="font-size:95%"
-              >Get hands-on experience and guidance from the community members</p>
+              >Get hands-on experience and guidance from a variety of workshops</p>
             </v-col>
             <v-col md="3" lg="3" sm="6" cols="6" class="text-center pa-2">
-              <v-icon large style="font-size:300%">mdi-school</v-icon>
-              <p class="google-font mt-2" style="font-size:130%">Campus Roadshows</p>
+              <v-icon large style="font-size:300%">mdi-search-web</v-icon>
+              <p class="google-font mt-2" style="font-size:130%">Something We Offer</p>
               <p
                 class="google-font"
                 style="font-size:95%"
-              >Share knowledge in different Companies, colleges and universities</p>
+              >Lorem Ipsum dolor sit amet consecutar Lorem Ipsum dolor sit amet</p>
             </v-col>
             <v-col md="3" lg="3" sm="6" cols="6" class="text-center pa-2">
-              <v-icon large style="font-size:300%">mdi-chart-bubble</v-icon>
-              <p class="google-font mt-2" style="font-size:130%">Live Viewing Parties</p>
+              <v-icon large style="font-size:300%">mdi-information-outline</v-icon>
+              <p class="google-font mt-2" style="font-size:130%">Something We Offer</p>
               <p
                 class="google-font"
                 style="font-size:95%"
-              >Share knowledge in different Companies, colleges and universities</p>
+              >Lorem Ipsum dolor sit amet consecutar Lorem Ipsum dolor sit amet</p>
             </v-col>
           </v-row>
         </v-container>
