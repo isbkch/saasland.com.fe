@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Amazon EC2",
+    "image": "aws-ec2.svg",
+    "socialLinks": {
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Amazon CloudFront",
+    "image": "aws-cloudfront.svg",
+    "socialLinks": {
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Amazon Cloudwatch",
+    "image": "aws-cloudwatch.svg",
+    "socialLinks": {
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Amazon RDS",
+    "image": "aws-rds.svg",
+    "socialLinks": {
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "AWS Web Application Firewall",
+    "image": "aws-waf.svg",
+    "socialLinks": {
+      "linkedin": "#"
+    }
+  }
+]

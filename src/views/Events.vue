@@ -3,7 +3,7 @@
         <v-container fluid class="pa-0">
             <v-row justify="center" align="center" :class="this.$vuetify.theme.dark == true?'grey darken-4':'grey lighten-4'" class="py-0 my-0">
                 <v-col md="12" lg="10" sm="11" xs="12" class="py-3 my-0" >
-                    <eventsHeader /> 
+                    <eventsHeader />
                     <upcomingMeetupsEvents v-if="checkExistance(config.keysandsecurity.meetup,0)" />
                     <featureEvents v-else />
                 </v-col>
