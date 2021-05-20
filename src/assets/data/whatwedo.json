@@ -1,32 +1,27 @@
 [
     {
-        "TechName":"Angular",
-        "image":"angular.svg",
-        "link":"https://angular.io/"
+        "TechName":"Amazon EC2",
+        "image":"aws-ec2.svg",
+        "link":"https://aws.amazon.com/ec2/"
     },
     {
-        "TechName":"Google Cloud Platform",
-        "image":"gcp.svg",
-        "link":"https://cloud.google.com/"
+        "TechName":"Amazon CloudFront",
+        "image":"aws-cloudfront.svg",
+        "link":"https://aws.amazon.com/cloudfront/"
     },
     {
-        "TechName":"Android",
-        "image":"android.svg",
-        "link":"https://www.android.com/"
+        "TechName":"Amazon Cloudwatch",
+        "image":"aws-cloudwatch.svg",
+        "link":"https://aws.amazon.com/cloudwatch/"
     },
     {
-        "TechName":"Actions On Google",
-        "image":"aog.png",
-        "link":"https://developers.google.com/actions/"
+        "TechName":"Amazon RDS",
+        "image":"aws-rds.svg",
+        "link":"https://aws.amazon.com/rds/"
     },
     {
-        "TechName":"Firebase",
-        "image":"firebase.svg",
-        "link":"https://firebase.google.com/"
-    },
-    {
-        "TechName":"TensorFlow",
-        "image":"tf.svg",
-        "link":"https://www.tensorflow.org/"
+        "TechName":"AWS Web Application Firewall",
+        "image":"aws-waf.svg",
+        "link":"https://aws.amazon.com/waf/"
     }
 ]
