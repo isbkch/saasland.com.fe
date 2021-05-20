@@ -33,10 +33,13 @@
 
 <script>
 import { mapState } from "vuex";
+import config from "@/assets/data/config.json";
 
 export default {
   name: "App",
-  data: () => ({}),
+  data: () => ({
+    config: config
+  }),
   computed: {
     ...mapState(["config"])
   }

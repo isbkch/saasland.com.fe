@@ -2,7 +2,9 @@
     "generalConfig": {
         "name": "SaaS Builder",
         "shortDescription": "SaaS Builder is an initiative to lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet.",
+        "longDescription": "This is a long description SaaS Builder is an initiative to lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet. lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet. lorem ipsum dolor sit amet lorem ipsum dolor sit amet. lorem ipsum dolor sit amet lorem ipsum dolor sit amet.",
         "becomeMemberLink": "http://#",
-        "learnMoreLink": "http://#"
+        "learnMoreLink": "http://#",
+        "meetupLink": "http://#"
     }
 }

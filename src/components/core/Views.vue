@@ -8,12 +8,12 @@
 
 <script>
 export default {
-  data(){
+  data() {
     return {
       show : false,
     }
   },
-  created(){
+  created() {
    this.show = true
   }
 }
