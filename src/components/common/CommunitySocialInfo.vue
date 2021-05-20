@@ -1,5 +1,5 @@
 <template>
-  <p class="google-font mt-4 mb-3" style="font-size:130%">
+  <p class="roboto-font mt-4 mb-3" style="font-size:130%">
     Follow Us:
     <v-tooltip top v-if="checkExistance(config.generalConfig.socialLinks.facebook,0)">
       <template v-slot:activator="{ on }">

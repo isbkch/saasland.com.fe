@@ -12,9 +12,9 @@
       style="background-position:right"
     >
       <v-col cols="12" md="12" lg="12" sm="12" class>
-        <p class="google-font mb-0" style="font-size:150%;color: #1a73e8;">Upcoming Events</p>
+        <p class="roboto-font mb-0" style="font-size:150%;color: #e76d0c;">Upcoming Events</p>
         <p
-          class="google-font mt-0"
+          class="roboto-font mt-0"
           style="font-size:95%"
         >Our events are open to newbies, developers, managers, and organizations who are interested in Google's technologies or use them as part of their projects.</p>
         <v-row v-if="showLoader">
@@ -50,7 +50,7 @@
             class="pa-3"
             :class="$vuetify.theme.dark == true?'darkModeCard':'card-light'"
           >
-            <p class="google-font px-2 mb-0" style="font-size:140%">
+            <p class="roboto-font px-2 mb-0" style="font-size:140%">
               <v-icon>mdi-calendar-blank</v-icon>
               <br />No Upcoming Events!
             </p>

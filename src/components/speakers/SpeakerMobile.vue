@@ -7,7 +7,7 @@
     </v-row>
     <v-card v-else-if="Object.keys(speaker).length>0" flat class="ma-0 pa-0" color="transparent">
       <v-card-title
-        class="grey lighten-4 google-font"
+        class="grey lighten-4 roboto-font"
         primary-title
         :style="{'background-image':'url('+ require('@/assets/img/dontremove/spakerhead.jpg') +')'}"
         style="background-position:right top;padding-top:25%;"
@@ -31,28 +31,28 @@
                 </v-img>
               </v-avatar>
               <p
-                class="my-0 mt-3 google-font"
+                class="my-0 mt-3 roboto-font"
                 style="font-size:150%;"
                 :style="{color:this.$vuetify.theme.dark?'white':'#424242'}"
               >{{speaker.name}}</p>
-              <p class="google-font my-0" style="font-size:110%">{{ speaker.designation }}</p>
+              <p class="roboto-font my-0" style="font-size:110%">{{ speaker.designation }}</p>
               <p
-                class="my-0 google-font"
+                class="my-0 roboto-font"
                 style="font-size:110%"
                 :style="{color:this.$vuetify.theme.dark?'white':'#424242'}"
               >{{speaker.company.name}}</p>
-              <p class="google-font my-0">{{ speaker.city }}, {{ speaker.country }}</p>
+              <p class="roboto-font my-0">{{ speaker.city }}, {{ speaker.country }}</p>
             </v-col>
             <v-col cols="12" class="text-center ma-0 pa-0">
               <SocialMediaDetails :data="speaker.socialLinks" />
             </v-col>
             <v-col class="pa-2" cols="12" sm="8">
-              <p class="google-font my-4" style="font-size:110%">{{speaker.bio}}</p>
+              <p class="roboto-font my-4" style="font-size:110%">{{speaker.bio}}</p>
             </v-col>
           </v-row>
         </v-container>
 
-        <p class="my-0 google-font mt-2" style="font-size:120%">
+        <p class="my-0 roboto-font mt-2" style="font-size:120%">
           <b>Sessions:</b>
         </p>
 
@@ -63,14 +63,14 @@
                 <v-list-item-avatar>
                   <v-avatar color="grey lighten-2">
                     <span
-                      class="google-font black--text"
+                      class="roboto-font black--text"
                       style="width:100vh"
                     >{{getCharString(sess.name)}}</span>
                   </v-avatar>
                 </v-list-item-avatar>
 
                 <v-list-item-content>
-                  <v-list-item-title class="google-font">{{ sess.name }}</v-list-item-title>
+                  <v-list-item-title class="roboto-font">{{ sess.name }}</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list>
@@ -107,9 +107,9 @@
                   </v-row>
                 </template>
               </v-img>
-              <h2 class="google-font">Speaker Not Found</h2>
+              <h2 class="roboto-font">Speaker Not Found</h2>
               <p
-                class="google-font"
+                class="roboto-font"
               >The requested URL /{{this.$route.params.id}} was not found on this server. That’s all we know.</p>
             </v-col>
           </v-row>

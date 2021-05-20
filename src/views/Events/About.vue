@@ -21,7 +21,7 @@
               </v-row>
             </template>
             <v-card-title
-              class="fill-height align-end google-font pb-5 white--text"
+              class="fill-height align-end roboto-font pb-5 white--text"
             >
               <div>
                 <p class="my-0" style="font-size:150%">
@@ -60,12 +60,12 @@
                   ? 'white--text'
                   : 'grey--text text--darken-3'
               "
-              class="google-font mb-0"
+              class="roboto-font mb-0"
               style="font-size:180%"
             >
               {{ eventDetails.name }} Details
             </h1>
-            <p class="google-font mb-3" style="font-size:110%">{{ eventDetails.des }}</p>
+            <p class="roboto-font mb-3" style="font-size:110%">{{ eventDetails.des }}</p>
 
             <span v-for="(item, i) in eventDetails.hashtags" :key="i">
               <v-chip
@@ -77,16 +77,16 @@
               >
             </span>
 
-            <p class="google-font mb-0 mt-3">
+            <p class="roboto-font mb-0 mt-3">
               <b>Date:</b>
               {{ eventDetails.date }}
             </p>
-            <p class="google-font my-0">
+            <p class="roboto-font my-0">
               <b>Time:</b>
               {{ eventDetails.time.starttime }} -
               {{ eventDetails.time.endtime }}
             </p>
-            <p class="google-font my-0">
+            <p class="roboto-font my-0">
               <b>Venue: </b>
               <a
                 target="_blank"
@@ -97,7 +97,7 @@
             </p>
 
             <div class="mt-4 pb-5">
-              <!-- <p class="google-font mb-0">
+              <!-- <p class="roboto-font mb-0">
               <b>Important Links</b>
             </p> -->
               <v-btn

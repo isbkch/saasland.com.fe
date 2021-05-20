@@ -2,14 +2,14 @@
   <v-container fluid>
     <v-row align="center" justify="center" class="mb-0">
       <v-col cols="12" md="12" lg="12" sm="12" class="mb-0">
-        <p class="google-font mb-1" style="font-weight: 350; font-size: 200%">
-          <b>Our <span style="color: #1a73e8">Partners</span> </b>
+        <p class="roboto-font mb-1" style="font-weight: 350; font-size: 200%">
+          <b>Our <span style="color: #e76d0c">Partners</span> </b>
         </p>
-        <p class="google-font mt-1 mb-0" style="font-size: 100%">
+        <p class="roboto-font mt-1 mb-0" style="font-size: 100%">
           A very big thank you to all our partners for their continued
           partnership.
         </p>
-        <p class="google-font mt-0 mb-0" style="font-size: 100%">
+        <p class="roboto-font mt-0 mb-0" style="font-size: 100%">
           If you’re interested in being showcased throughout , contact
           <a
             style="color: #1565c0; text-decoration: none"
@@ -27,7 +27,7 @@
       class="mt-0 pt-0"
     >
       <v-col cols="12" md="12" lg="12" sm="12" class="mx-0 mt-0">
-        <p class="google-font mb-0" style="font-size: 130%">General Partners</p>
+        <p class="roboto-font mb-0" style="font-size: 130%">General Partners</p>
       </v-col>
       <v-col
         cols="6"
@@ -63,7 +63,7 @@
                   </v-layout>
                 </v-img>
               </template>
-              <span class="google-font">{{ partner.name }}</span>
+              <span class="roboto-font">{{ partner.name }}</span>
             </v-tooltip>
           </a>
         </div>

@@ -16,18 +16,18 @@
       </v-col>
       <v-col md="9" sm="6" cols="12" class="px-0">
         <p
-          class="google-font mb-1"
+          class="roboto-font mb-1"
           :class="$vuetify.theme.dark == true?'dark-font-color':'light-font-color'"
           style="font-weight: 350;font-size:230%"
         >
           <b>
             Build SaaS apps
-            <span style="color: #1a73e8;">together</span>.
+            <span style="color: #e76d0c;">together</span>.
           </b>
         </p>
-        <p class="google-font mt-0 mb-0" style="font-size:150%">{{config.generalConfig.name}}</p>
-        <p class="google-font" style="font-size:100%">{{config.generalConfig.shortDescription}}</p>
-        <p class="google-font" style="font-size:100%;color:#9e9e9e">
+        <p class="roboto-font mt-0 mb-0" style="font-size:150%">{{config.generalConfig.name}}</p>
+        <p class="roboto-font" style="font-size:100%">{{config.generalConfig.shortDescription}}</p>
+        <p class="roboto-font" style="font-size:100%;color:#9e9e9e">
           <span v-for="(item,i) in hashtags" :key="i">
             <v-chip
               :href="'https://twitter.com/hashtag/'+item.tag"
@@ -46,8 +46,8 @@
           target="_blank"
           rel="noreferrer"
           aria-label="Become a Member"
-          class="ma-0 google-font elevation-1 primary mr-2"
-          style="text-transform: capitalize;border-radius:5px;color:white"
+          class="ma-0 roboto-font elevation-1 primary mr-2"
+          style="text-transform: capitalize;border-radius:3px;color:white; border-color: #e76d0c #e15500 #e15500 !important; background-color: #ec7211 !important;"
         >Become a Member</v-btn>
         <v-btn
           v-if="checkExistance(config.generalConfig.learnMoreLink,0)"
@@ -57,7 +57,7 @@
           rounded
           rel="noreferrer"
           color="cyan"
-          style="text-transform: capitalize;border-radius:5px;text-transform: capitalize;"
+          style="text-transform: capitalize;border-radius:3px;text-transform: capitalize; border-color: #e76d0c #e15500 #e15500 !important; color: #000 !important"
           outlined
           class="ml-0"
           dark

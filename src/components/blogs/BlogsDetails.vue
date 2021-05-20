@@ -4,7 +4,7 @@
       <v-col md="12" sm="12" cols="12" class="py-0 my-0">
         <v-row class>
           <v-col>
-            <p class="google-font mb-0">
+            <p class="roboto-font mb-0">
               Here are the top 10 blogs/articles written by us. You can find more blogs/articles on
               <a :href="blogURL" style="text-decoration:none" target="_blank">Medium</a>
             </p>
@@ -59,7 +59,7 @@
               </v-row>
             </template>
           </v-img>
-          <h2 class="google-font">Blogs Not Found</h2>
+          <h2 class="roboto-font">Blogs Not Found</h2>
         </v-col>
         </v-row>
 

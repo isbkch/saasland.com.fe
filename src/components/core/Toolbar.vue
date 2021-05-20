@@ -6,7 +6,7 @@
     <div class="d-flex align-center" v-if="checkExistance(config.generalConfig.toolbarImage, 0)">
       <router-link
         to="/"
-        class="google-font"
+        class="roboto-font"
         style="text-decoration:none;font-size:110%"
         :class="
           this.$vuetify.theme.dark ? 'white--text' : 'grey--text text--darken-2'
@@ -22,10 +22,10 @@
         />
       </router-link>
     </div>
-    <v-toolbar-title class="google-font px-0" style="width:280px">
+    <v-toolbar-title class="roboto-font px-0" style="width:280px">
       <router-link
         to="/"
-        class="google-font"
+        class="roboto-font"
         aria-label="Communiy homepage"
         style="text-decoration:none;font-size:110%"
         :class="this.$vuetify.theme.dark?'whiteText':'blackText'"
@@ -45,7 +45,7 @@
         v-for="(link, i) in links.filter((obj) => obj.meta.showToolbar)"
         :key="i"
         :to="link.to"
-        class="google-font"
+        class="roboto-font"
         @click="onClick($event, link)"
         style="text-transform: capitalize;"
         >{{ link.text }}</v-tab
@@ -56,7 +56,7 @@
     <v-toolbar-title
       v-if="isOffline"
       style="background-color:red;border:1px solid red;border-radius:6px;color:white;font-size:90%"
-      class="google-font px-2"
+      class="roboto-font px-2"
     >Offline</v-toolbar-title>
     <PushNotification class="mr-1" />
     <v-btn icon v-on:click="darkMode" class="ml-1" aria-label="Theme Switch BTN">
@@ -115,8 +115,8 @@ export default {
 <style scoped>
   .whiteText{
     color:white
-  } 
+  }
   .blackText{
     color: rgba(0,0,0,.87);
-  } 
+  }
 </style>

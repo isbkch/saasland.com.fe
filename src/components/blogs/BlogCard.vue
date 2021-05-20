@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div 
+    <div
     style="min-height:360px;max-height:360px"
-      :class="$vuetify.theme.dark == true?'card-dark':'card-light'" 
+      :class="$vuetify.theme.dark == true?'card-dark':'card-light'"
       class="pa-0 hidden-sm-and-down" >
         <v-img
               :src="data.data.thumbnail"
@@ -23,13 +23,13 @@
               </template>
           </v-img>
           <div class="pa-3" >
-            <p class="google-font ma-0 mt-2" style="font-size:110%;" >{{data.data.title | summary(20) }}</p>
-            <p class="google-font mt-0 mb-0" style="font-size:90%;">{{data.data.pubDate}}</p>
-            <p class="google-font mt-0 mb-4" style="font-size:90%;">{{data.data.author }}</p>
+            <p class="roboto-font ma-0 mt-2" style="font-size:110%;" >{{data.data.title | summary(20) }}</p>
+            <p class="roboto-font mt-0 mb-0" style="font-size:90%;">{{data.data.pubDate}}</p>
+            <p class="roboto-font mt-0 mb-4" style="font-size:90%;">{{data.data.author }}</p>
             <!-- <v-chip x-small v-for="(item,i) in data.data.categories" outlined :key="i">{{item}}</v-chip> -->
-            <v-btn target="_blank" text small :href="data.data.link" class="mb-0 mt-0 google-font" style="color:#1a73e8;text-decoration:none">Read</v-btn>
+            <v-btn target="_blank" text small :href="data.data.link" class="mb-0 mt-0" style="color:#e76d0c;text-decoration:none">Read</v-btn>
           </div>
-        
+
     </div>
 
     <div class="d-md-none d-lg-none">
@@ -40,10 +40,10 @@
       >
         <v-list-item three-line>
           <v-list-item-content>
-            <div class=" mb-4 google-font">{{data.data.pubDate | dateFilter}}</div>
-            <v-list-item-title class="mb-1 google-font" style="font-size:120%">{{data.data.title | summary(20)}}</v-list-item-title>
-            <v-list-item-subtitle class="google-font">{{data.data.author}}</v-list-item-subtitle>
-            <v-list-item-subtitle class="google-font mb-0" v-html="$options.filters.summary(filterData(data.data.description),50)"></v-list-item-subtitle>
+            <div class=" mb-4 roboto-font">{{data.data.pubDate | dateFilter}}</div>
+            <v-list-item-title class="mb-1 roboto-font" style="font-size:120%">{{data.data.title | summary(20)}}</v-list-item-title>
+            <v-list-item-subtitle class="roboto-font">{{data.data.author}}</v-list-item-subtitle>
+            <v-list-item-subtitle class="roboto-font mb-0" v-html="$options.filters.summary(filterData(data.data.description),50)"></v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-avatar

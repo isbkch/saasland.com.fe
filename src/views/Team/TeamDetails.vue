@@ -7,7 +7,7 @@
             <v-btn
               text
               @click="goToTeam"
-              class="ma-0 google-font mb-0"
+              class="ma-0 roboto-font mb-0"
               style="border-radius:5px;text-transform: capitalize;text-decoration:none;"
             >
               <v-icon left style="font-size:150%">mdi-arrow-left-thick</v-icon>
@@ -49,9 +49,9 @@
                     alt
                   />
                 </v-avatar>
-                <p class="google-font mt-3" style="font-size:120%">{{MemberDetails.name}}</p>
+                <p class="roboto-font mt-3" style="font-size:120%">{{MemberDetails.name}}</p>
                 <p
-                  class="mt-1 mb-0 google-font mt-0"
+                  class="mt-1 mb-0 roboto-font mt-0"
                   style="font-size:100%"
                 >{{MemberDetails.designation}}</p>
                 <v-chip class="mt-2" small>{{MemberDetails.role}}</v-chip>
@@ -72,12 +72,12 @@
                 <p class="mb-0">
                   <b>Bio</b>
                 </p>
-                <p class="mt-1 mb-0 google-font mt-0" style="font-size:110%">{{MemberDetails.bio}}</p>
+                <p class="mt-1 mb-0 roboto-font mt-0" style="font-size:110%">{{MemberDetails.bio}}</p>
 
                 <p class="mb-0 mt-3">
                   <b>Social Links</b>
                 </p>
-                <p class="mt-1 mb-0 google-font mt-0" style="font-size:110%">
+                <p class="mt-1 mb-0 roboto-font mt-0" style="font-size:110%">
                   <span
                     style="cursor: pointer;"
                     v-for="(slink,i) in MemberDetails.socialLinks"
@@ -127,9 +127,9 @@
                     </v-row>
                   </template>
                 </v-img>
-                <h2 class="google-font">Team Member Not Found</h2>
+                <h2 class="roboto-font">Team Member Not Found</h2>
                 <p
-                  class="google-font"
+                  class="roboto-font"
                 >The requested URL /{{this.$route.params.id}} was not found on this server. That’s all we know.</p>
               </v-col>
             </v-row>

@@ -12,7 +12,7 @@
             <v-col cols="12" sm="12">
               <v-card elevation="1">
                 <v-card-title
-                  class="grey lighten-4 google-font"
+                  class="grey lighten-4 roboto-font"
                   primary-title
                   :style="{'background-image':'url('+ require('@/assets/img/dontremove/spakerhead.jpg') +')'}"
                   style="background-position:right top;padding-top:20%;"
@@ -35,17 +35,17 @@
                           </v-img>
                         </v-avatar>
                         <p
-                          class="my-0 mt-3 google-font"
+                          class="my-0 mt-3 roboto-font"
                           style="font-size:150%;"
                           :style="{color:this.$vuetify.theme.dark?'white':'#424242'}"
                         >{{speaker.name}}</p>
-                        <p class="google-font my-0">{{ speaker.designation }}</p>
+                        <p class="roboto-font my-0">{{ speaker.designation }}</p>
                         <p
-                          class="my-0 google-font"
+                          class="my-0 roboto-font"
                           style="font-size:110%"
                           :style="{color:this.$vuetify.theme.dark?'white':'#424242'}"
                         >{{speaker.company.name}}</p>
-                        <p class="google-font my-0">{{ speaker.city }}, {{ speaker.country }}</p>
+                        <p class="roboto-font my-0">{{ speaker.city }}, {{ speaker.country }}</p>
                       </v-col>
                       <v-col cols="12"  class="text-center mt-0 pt-0">
                         <SocialMediaDetails :data="speaker.socialLinks"/>
@@ -58,9 +58,9 @@
 
             <v-col cols="12" sm="12">
               <v-card>
-                <v-card-title class="google-font">About:</v-card-title>
+                <v-card-title class="roboto-font">About:</v-card-title>
                 <v-card-text>
-                  <p class="google-font" style="font-size:90%">{{speaker.bio}}</p>
+                  <p class="roboto-font" style="font-size:90%">{{speaker.bio}}</p>
                 </v-card-text>
               </v-card>
             </v-col>
@@ -70,7 +70,7 @@
           <v-row align="center">
             <v-col cols="12">
               <v-card outlined>
-                <v-card-title class="google-font">Sessions:</v-card-title>
+                <v-card-title class="roboto-font">Sessions:</v-card-title>
                 <v-card-text>
                   <v-row align="center">
                     <v-col cols="12" md="6" xl="4" v-for="sess in events" :key="sess.id">
@@ -79,13 +79,13 @@
                           <v-list-item-avatar>
                             <v-avatar color="grey lighten-2">
                               <span
-                                class="google-font black--text"
+                                class="roboto-font black--text"
                                 style="width:100vh"
                               >{{getCharString(sess.name)}}</span>
                             </v-avatar>
                           </v-list-item-avatar>
                           <v-list-item-content>
-                            <v-list-item-title class="google-font">{{ sess.name }}</v-list-item-title>
+                            <v-list-item-title class="roboto-font">{{ sess.name }}</v-list-item-title>
                           </v-list-item-content>
                         </v-list-item>
                       </v-list>
@@ -126,9 +126,9 @@
                     </v-row>
                   </template>
                 </v-img>
-                <h2 class="google-font">Speaker Not Found</h2>
+                <h2 class="roboto-font">Speaker Not Found</h2>
                 <p
-                  class="google-font"
+                  class="roboto-font"
                 >The requested URL /{{this.$route.params.id}} was not found on this server. That’s all we know.</p>
               </v-col>
             </v-row>

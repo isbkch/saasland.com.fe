@@ -2,12 +2,12 @@
     <v-container fluid class="py-0 my-0 mt-5">
         <!-- <v-row class="py-0 my-0">
             <v-col md="12" sm="12" cols="12" class="py-0 my-0">
-                
+
             </v-col>
         </v-row> -->
         <v-row align="center" class="py-0 my-0 mb-5">
             <v-col md="8" sm="12" cols="12" class="py-0 my-0">
-                <h1 class="google-font mb-2">Community Guidelines</h1>
+                <h1 class="roboto-font mb-2">Community Guidelines</h1>
                 <!-- {{communitydata.CommunityGuideline}} -->
                 <v-expansion-panels accordion>
                     <v-expansion-panel
@@ -39,7 +39,7 @@
                     </template>
                 </v-img>
             </v-col>
-            
+
         </v-row>
     </v-container>
 </template>

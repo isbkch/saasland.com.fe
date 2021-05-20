@@ -8,42 +8,42 @@
         class="pa-3"
       >
         <!-- <v-chip color="primary" label outlined class="mt-1 mx-0 mb-0" small>{{data.data.status}}</v-chip> -->
-        <p class="google-font mt-2 mb-0" style="font-size:90%">{{data.data.local_date | dateFilter}}</p>
-        <p class="google-font ma-0 mt-0" style="font-size:120%;">{{data.data.name |summary(20) }}</p>
-        <p class="google-font mt-0 mb-0" style="font-size:90%;">{{data.data.local_time}}</p>
+        <p class="roboto-font mt-2 mb-0" style="font-size:90%">{{data.data.local_date | dateFilter}}</p>
+        <p class="roboto-font ma-0 mt-0" style="font-size:120%;">{{data.data.name |summary(20) }}</p>
+        <p class="roboto-font mt-0 mb-0" style="font-size:90%;">{{data.data.local_time}}</p>
         <p
-          class="google-font mt-0 mb-0"
+          class="roboto-font mt-0 mb-0"
           style="font-size:90%;"
         >{{data.data.venue.name | summary(20) }}</p>
-        <p class="mb-0 mt-2 google-font" style="color:#1a73e8">See More</p>
+        <p class="mb-0 mt-2 roboto-font" style="color:#e76d0c">See More</p>
       </div>
     </template>
     <v-card :class="this.$vuetify.theme.dark == true?'grey darken-3':'white'" v-if="dialog">
       <v-card-title
-        class="px-5 py-5 google-font"
+        class="px-5 py-5 roboto-font"
         style="background-position:right bottom;"
       >{{data.data.name}}</v-card-title>
 
       <v-card-text class="pa-5">
         <!-- <v-chip :color="data.vdata.tag.color" label outlined class="mt-1 mb-0" small>{{data.vdata.tag.name}}</v-chip> -->
-        <p class="google-font mt-3 mb-0" style="font-size:110%">
+        <p class="roboto-font mt-3 mb-0" style="font-size:110%">
           <b>Venue:</b>
           {{data.data.venue.name}}
         </p>
-        <p class="google-font mt-1 mb-0" style="font-size:110%">
+        <p class="roboto-font mt-1 mb-0" style="font-size:110%">
           <b>Date:</b>
           {{data.data.local_date | dateFilter}}
         </p>
-        <p class="google-font mt-0 mb-0" style="font-size:110%;">
+        <p class="roboto-font mt-0 mb-0" style="font-size:110%;">
           <b>Time:</b>
           {{data.data.local_time}}
         </p>
-        <p class="google-font mt-3 mb-0" style="font-size:110%">
+        <p class="roboto-font mt-3 mb-0" style="font-size:110%">
           <b>Description:</b>
           <span v-html="$options.filters.summary(data.data.description,100)"></span>
         </p>
         <v-btn
-          color="#1a73e8"
+          color="#e76d0c"
           v-if="checkExistance(data.data.link,0)"
           :href="data.data.link"
           target="_blank"

@@ -13,22 +13,22 @@
             :lazy-src="getImgUrl(data.image, 'profile.jpg')"
           />
         </v-avatar>
-        <p class="mt-3 mb-0 google-font mb-0" style="font-size:105%">{{data.name}}</p>
+        <p class="mt-3 mb-0 roboto-font mb-0" style="font-size:105%">{{data.name}}</p>
         <p
-          class="mt-1 mb-0 google-font mt-0"
+          class="mt-1 mb-0 roboto-font mt-0"
           style="font-size:80%"
         >{{data.company.name | summery(20)}}</p>
       </div>
     </template>
 
     <v-card color>
-      <v-card-title class="px-5 google-font" primary-title>{{data.name}}</v-card-title>
+      <v-card-title class="px-5 roboto-font" primary-title>{{data.name}}</v-card-title>
 
       <v-card-text class="pa-5">
-        <p class="google-font mb-0">{{data.city}}, {{data.country}}</p>
-        <p class="google-font mb-0">{{data.designation}}</p>
-        <p class="google-font mt-0">{{data.company.name}}</p>
-        <p class="google-font">{{data.bio}}</p>
+        <p class="roboto-font mb-0">{{data.city}}, {{data.country}}</p>
+        <p class="roboto-font mb-0">{{data.designation}}</p>
+        <p class="roboto-font mt-0">{{data.company.name}}</p>
+        <p class="roboto-font">{{data.bio}}</p>
         <socialMediaDetails class="pl-0 ml-0" :data="data.socialLinks" />
         <v-btn class="primary mt-3" small depressed @click="goToSpeaker(data.id)">See More Info</v-btn>
       </v-card-text>

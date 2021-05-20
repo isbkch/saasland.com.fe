@@ -5,8 +5,8 @@
         <v-col md="12" sm="12" cols="12" class="py-0 my-0 mb-5 mt-5">
           <v-row class="pa-0" align="center">
             <v-col cols="12" md="12" lg="12" sm="12" class="pa-1">
-              <h2 :class="this.$vuetify.theme.dark?'white--text':'grey--text text--darken-3'" class="google-font mb-5 mt-5">Our Partners</h2>
-              <p class="google-font mt-1 mb-0" style="font-size:110%">
+              <h2 :class="this.$vuetify.theme.dark?'white--text':'grey--text text--darken-3'" class="roboto-font mb-5 mt-5">Our Partners</h2>
+              <p class="roboto-font mt-1 mb-0" style="font-size:110%">
                 A very big thank you to all our partners for their continued
                 partnership.
               </p>
@@ -66,7 +66,7 @@
                         </template>
                       </v-img>
                     </template>
-                    <span class="google-font">{{ item.name }}</span>
+                    <span class="roboto-font">{{ item.name }}</span>
                   </v-tooltip>
                 </a>
               </div>

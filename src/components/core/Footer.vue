@@ -23,23 +23,23 @@
 
             <v-row justify="start" class="">
               <v-col cols="12" md="3" lg="3" sm="3" class="py-2" >
-                  <p class="google-font mb-0" style="font-size: 140%;font-weight: 300;"><b>About</b></p>
+                  <p class="roboto-font mb-0" style="font-size: 140%;font-weight: 300;"><b>About</b></p>
                   <div v-for="(item,i) in config.footerConfig['About']" :key="i">
-                        <a :href="item.link" rel="noreferrer" :class="$vuetify.theme.dark?'darkThemeTextLink':'lightThemeTextLink'" class="google-font my-3" target="_blank" style="text-decoration: none;font-size:110%">{{item.linkname}}</a><br>
+                        <a :href="item.link" rel="noreferrer" :class="$vuetify.theme.dark?'darkThemeTextLink':'lightThemeTextLink'" class="roboto-font my-3" target="_blank" style="text-decoration: none;font-size:110%">{{item.linkname}}</a><br>
                   </div>
               </v-col>
 
               <v-col cols="12" md="3" lg="3" sm="3" class="py-2" >
-                  <p class="google-font mb-0" style="font-size: 140%;font-weight: 300;"><b>Resources</b></p>
+                  <p class="roboto-font mb-0" style="font-size: 140%;font-weight: 300;"><b>Resources</b></p>
                   <div v-for="(item,i) in config.footerConfig['Resources']" :key="i">
-                        <a :href="item.link" rel="noreferrer" :class="$vuetify.theme.dark?'darkThemeTextLink':'lightThemeTextLink'" class="google-font my-3" target="_blank" style="text-decoration: none;font-size:110%">{{item.linkname}}</a><br>
+                        <a :href="item.link" rel="noreferrer" :class="$vuetify.theme.dark?'darkThemeTextLink':'lightThemeTextLink'" class="roboto-font my-3" target="_blank" style="text-decoration: none;font-size:110%">{{item.linkname}}</a><br>
                   </div>
               </v-col>
 
               <v-col cols="12" md="3" lg="3" sm="3" class="py-2" >
-                  <p class="google-font mb-0" style="font-size: 140%;font-weight: 300;"><b>Developer Console</b></p>
+                  <p class="roboto-font mb-0" style="font-size: 140%;font-weight: 300;"><b>Developer Console</b></p>
                   <div v-for="(item,i) in config.footerConfig['Developer Console']" :key="i">
-                        <a :href="item.link" rel="noreferrer" :class="$vuetify.theme.dark?'darkThemeTextLink':'lightThemeTextLink'" class="google-font my-3" target="_blank" style="text-decoration: none;font-size:110%">{{item.linkname}}</a><br>
+                        <a :href="item.link" rel="noreferrer" :class="$vuetify.theme.dark?'darkThemeTextLink':'lightThemeTextLink'" class="roboto-font my-3" target="_blank" style="text-decoration: none;font-size:110%">{{item.linkname}}</a><br>
                   </div>
               </v-col>
             </v-row>
@@ -50,24 +50,24 @@
       </v-row>
 
       <v-row align="center" justify="center" class="mb-0">
-        <v-col cols="12" md="10" lg="10" sm="11" class="px-0 mx-0"> 
+        <v-col cols="12" md="10" lg="10" sm="11" class="px-0 mx-0">
           <v-divider></v-divider>
           <v-toolbar text class="pa-0 px-0 mt-3 mx-0 elevation-0" style="padding:0 !important" :class="this.$vuetify.theme.dark == true?'grey darken-4':'white'">
-            <v-toolbar-title class="google-font pl-0 ml-0 mr-3" style="font-size:200%">{{config.generalConfig.shortName || config.generalConfig.name || ''}}</v-toolbar-title>
+            <v-toolbar-title class="roboto-font pl-0 ml-0 mr-3" style="font-size:200%">{{config.generalConfig.shortName || config.generalConfig.name || ''}}</v-toolbar-title>
             <v-btn
-                v-for="(item,i) in config.footerConfig['Footer End Session Link']" 
+                v-for="(item,i) in config.footerConfig['Footer End Session Link']"
                 :key="i"
                 rel="noreferrer"
-                :href="item.link" target="_blank" 
-                class="ml-0 google-font hidden-sm-and-down"
-                style="text-transform: capitalize;font-size:110%" 
+                :href="item.link" target="_blank"
+                class="ml-0 roboto-font hidden-sm-and-down"
+                style="text-transform: capitalize;font-size:110%"
                 text
                 aria-label="Footer Bottom Button"
               >
                 {{ item.linkname }}
             </v-btn>
             <v-spacer></v-spacer>
-           <span class="subtitle-2 google-font"> Based on Project 
+           <span class="subtitle-2 roboto-font"> Based on Project
           <a
             href="https://github.com/gdg-x/aura/"
             target="_blank"

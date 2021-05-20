@@ -3,7 +3,7 @@
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title
-          class="google-font"
+          class="roboto-font"
           style="font-size:130%"
         >{{config.generalConfig.name || '' }}</v-list-item-title>
       </v-list-item-content>
@@ -18,7 +18,7 @@
         :to="link.to"
         :href="link.href"
         @click="onClick($event, link)"
-        class="google-font my-0 py-0"
+        class="roboto-font my-0 py-0"
         color="primary"
       >
         <v-list-item-icon>
@@ -32,7 +32,7 @@
     </v-list>
     <template v-slot:append>
       <div class="pl-2">
-        <p class="subtitle-2 google-font">
+        <p class="subtitle-2 roboto-font">
           Based on Project
           <a
             href="https://github.com/gdg-x/aura/"

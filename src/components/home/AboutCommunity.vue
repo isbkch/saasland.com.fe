@@ -1,29 +1,46 @@
 <template>
   <v-container fluid class="pa-0">
     <v-row align="center" class>
-      <v-col cols="12" md="12" lg="12" sm="12" class="pa-0" style="color:white">
+      <v-col
+        cols="12"
+        md="12"
+        lg="12"
+        sm="12"
+        class="pa-0"
+        style="color: white; background-color: #232F3E !important"
+      >
         <div class="ma-1">
           <div class="pa-5">
-            <p class="google-font mb-0" style="font-size:150%">About {{config.generalConfig.name}}</p>
-            <p
-              class="google-font mt-0"
-              style="font-size:95%"
-            >{{config.generalConfig.longDescription}}</p>
+            <p class="roboto-font mb-0" style="font-size: 150%">
+              About {{ config.generalConfig.name }}
+            </p>
+            <p class="roboto-font mt-0" style="font-size: 95%">
+              {{ config.generalConfig.longDescription }}
+            </p>
             <v-btn
-              v-if="checkExistance(config.generalConfig.meetupLink,0)"
+              v-if="checkExistance(config.generalConfig.meetupLink, 0)"
               :href="config.generalConfig.meetupLink"
               target="_blank"
               outlined
               color
-              class="ma-0 google-font mb-2"
-              style="border-radius:5px;text-transform: capitalize;color:white"
-            >Meetup Page</v-btn>&nbsp;
+              class="ma-0 roboto-font mb-2"
+              style="
+                border-radius: 5px;
+                text-transform: capitalize;
+                color: white;
+              "
+              >Meetup Page</v-btn
+            >&nbsp;
             <br />
             <router-link
               to="/about"
-              class="google-font"
-              style="text-decoration:none;color:white"
-            >See More about {{config.generalConfig.shortName || config.generalConfig.name}}</router-link>
+              class="roboto-font"
+              style="text-decoration: none; color: white"
+              >See More about
+              {{
+                config.generalConfig.shortName || config.generalConfig.name
+              }}</router-link
+            >
           </div>
         </div>
       </v-col>
@@ -38,10 +55,10 @@ import config from "@/assets/data/config.json";
 export default {
   name: "App",
   data: () => ({
-    config: config
+    config: config,
   }),
   computed: {
-    ...mapState(["config"])
-  }
+    ...mapState(["config"]),
+  },
 };
 </script>

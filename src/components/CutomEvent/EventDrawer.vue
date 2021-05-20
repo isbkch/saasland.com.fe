@@ -11,7 +11,7 @@
         v-for="(link, i) in links"
         :key="i"
         :to="'/events/'+$route.params.id+''+link.to"
-        class="google-font my-0 py-0"
+        class="roboto-font my-0 py-0"
         color="primary"
       >
         <v-list-item-icon>
@@ -25,17 +25,17 @@
 
       <v-divider class="my-2"></v-divider>
 
-      <v-list-item to="/about" target="_blank" class="google-font my-0 py-0" color="primary">
+      <v-list-item to="/about" target="_blank" class="roboto-font my-0 py-0" color="primary">
         <v-list-item-content>
           <v-list-item-title v-text="'Community Guidlines'" />
         </v-list-item-content>
       </v-list-item>
-      <v-list-item to="/about" target="_blank" class="google-font my-0 py-0" color="primary">
+      <v-list-item to="/about" target="_blank" class="roboto-font my-0 py-0" color="primary">
         <v-list-item-content>
           <v-list-item-title v-text="'Code of Conduct'" />
         </v-list-item-content>
       </v-list-item>
-      <v-list-item to="/about" target="_blank"  class="google-font my-0 py-0" color="primary">
+      <v-list-item to="/about" target="_blank"  class="roboto-font my-0 py-0" color="primary">
         <v-list-item-content>
           <v-list-item-title v-text="'About '+ config.generalConfig.name || ''" />
         </v-list-item-content>
@@ -43,7 +43,7 @@
     </v-list>
     <template v-slot:append>
       <div class="pl-2">
-        <p class="subtitle-2 google-font">
+        <p class="subtitle-2 roboto-font">
           Based on Project
           <a
             href="https://github.com/gdg-x/aura/"

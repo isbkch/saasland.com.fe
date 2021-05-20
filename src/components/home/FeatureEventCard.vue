@@ -8,11 +8,11 @@
         :class="$vuetify.theme.dark == true?'darkModeCardFeatureEvent':'lightModeCardFeatureEvent'"
         class="pa-3 py-5 fill-height"
       >
-        <p class="google-font mb-0" style="font-size:90%">{{data.date | dateFilter}}</p>
-        <p class="google-font mb-0" style="font-size:120%">{{data.name | summary(15)}}</p>
-        <p class="google-font mb-0" style="font-size:90%">{{data.venue.name | summary(20)}}</p>
+        <p class="roboto-font mb-0" style="font-size:90%">{{data.date | dateFilter}}</p>
+        <p class="roboto-font mb-0" style="font-size:120%">{{data.name | summary(15)}}</p>
+        <p class="roboto-font mb-0" style="font-size:90%">{{data.venue.name | summary(20)}}</p>
         <v-spacer></v-spacer>
-        <p class="mb-0 mt-2 google-font" style="color:#1a73e8">See More</p>
+        <p class="mb-0 mt-2 roboto-font" style="color:#e76d0c">See More</p>
       </div>
     </template>
     <v-card
@@ -22,29 +22,29 @@
       style="border-radius:5px"
       :class="this.$vuetify.theme.dark == true?'grey darken-3':'white'"
     >
-      <v-card-title class="px-5 py-5 google-font" style="background-position:right bottom;">
-        <p class="google-font mb-0" style="font-size:150%">{{data.name}}</p>
+      <v-card-title class="px-5 py-5 roboto-font" style="background-position:right bottom;">
+        <p class="roboto-font mb-0" style="font-size:150%">{{data.name}}</p>
         <v-spacer></v-spacer>
         <v-tooltip bottom>
       <template v-slot:activator="{ on }">
         <v-btn icon v-on="on" :href="'events/'+data.id" target="_blank">
           <v-icon>mdi-open-in-new</v-icon>
-        </v-btn> 
+        </v-btn>
       </template>
       <span>Open in New Tab</span>
     </v-tooltip>
-        
+
       </v-card-title>
 
       <v-card-text class="pb-5 pt-0">
-        <p class="google-font mb-0" style="font-size:120%">{{data.date}}</p>
-        <p class="google-font mb-0" style="font-size:110%">{{data.venue.name}}</p>
-        <p class="google-font">{{data.time.starttime}} - {{data.time.endtime}}</p>
+        <p class="roboto-font mb-0" style="font-size:120%">{{data.date}}</p>
+        <p class="roboto-font mb-0" style="font-size:110%">{{data.venue.name}}</p>
+        <p class="roboto-font">{{data.time.starttime}} - {{data.time.endtime}}</p>
 
-        <p class="google-font mb-0" style="font-size:95%">
+        <p class="roboto-font mb-0" style="font-size:95%">
           <b>Description</b>
         </p>
-        <p class="google-font mt-0" style="font-size:110%">{{data.des}}</p>
+        <p class="roboto-font mt-0" style="font-size:110%">{{data.des}}</p>
 
         <v-btn
           color="indigo"
@@ -56,7 +56,7 @@
         >Event Page</v-btn>
 
         <v-btn
-          color="#1a73e8"
+          color="#e76d0c"
           v-if="checkExistance(data.links.registration,0)"
           :href="data.links.registration"
           target="_blank"

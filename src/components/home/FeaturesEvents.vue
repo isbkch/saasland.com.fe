@@ -2,16 +2,16 @@
   <v-container fluid class="mb-1">
     <v-row align="center" justify="center" class>
       <v-col cols="12" md="12" lg="12" sm="12" class="mb-0">
-        <p class="google-font mb-0 mt-0" style="font-weight: 350;font-size:180%">
+        <p class="roboto-font mb-0 mt-0" style="font-weight: 350;font-size:180%">
           <b>
             Our
-            <span style="color: #1a73e8;">Feature Event</span>
+            <span style="color: #e76d0c;">Feature Event</span>
             &
-            <span style="color: #1a73e8;">Meetup</span>
+            <span style="color: #e76d0c;">Meetup</span>
           </b>
         </p>
         <p
-          class="google-font mt-0 mb-0"
+          class="roboto-font mt-0 mb-0"
           style="font-size:95%"
         >Events are listed in reverse chronological order by date.</p>
       </v-col>
@@ -33,7 +33,7 @@
               :class="$vuetify.theme.dark == true?'darkModeCardFeatureEvent':'lightModeCardFeatureEvent'"
               class="pa-4 px-5 mx-3"
             >
-              <p class="google-font my-2">Not Found</p>
+              <p class="roboto-font my-2">Not Found</p>
             </v-col>
           </v-row>
           <v-row v-else class="py-0 my-0 px-2">

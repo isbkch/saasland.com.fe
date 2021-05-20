@@ -6,13 +6,13 @@
     :background-color="this.$vuetify.theme.dark?'#212121':'white'"
     :color="this.$vuetify.theme.dark?'white':'primary'"
     class="hidden-md-and-up"
-  > 
+  >
     <v-btn
         v-for="(link, i) in links.filter(res=>res.meta.showBottomNav)" :key="i"
         :to="link.to"
         small
-        class="ml-0 google-font"
-        style="text-transform: capitalize;" 
+        class="ml-0 roboto-font"
+        style="text-transform: capitalize;"
         text
         @click="onClick($event, link)"
     >

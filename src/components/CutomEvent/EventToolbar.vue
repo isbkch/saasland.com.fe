@@ -3,10 +3,10 @@
       this.$vuetify.theme.dark ? {boxShadow:'0 2px 6px 0 rgba(0,0,0,.12), inset 0 -1px 0 0 #272727'}
       :{ boxShadow: '0 2px 6px 0 rgba(0,0,0,.12), inset  0 -1px 0 0 #dadce0' }">
     <v-app-bar-nav-icon aria-label="Hamburger Menu" @click="toggleEventDrawer"></v-app-bar-nav-icon>
-    <v-toolbar-title class="google-font px-0" style="width:280px">
+    <v-toolbar-title class="roboto-font px-0" style="width:280px">
       <router-link
         :to="'/events/'+$route.params.id+'/about'"
-        class="google-font"
+        class="roboto-font"
         aria-label="Communiy homepage"
         style="text-decoration:none;font-size:110%"
         :class="this.$vuetify.theme.dark?'whiteText':'blackText'"
@@ -49,8 +49,8 @@ export default {
 <style scoped>
   .whiteText{
     color:white
-  } 
+  }
   .blackText{
     color: rgba(0,0,0,.87);
-  } 
+  }
 </style>

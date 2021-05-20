@@ -3,7 +3,7 @@
     <v-container fluid class="py-0 my-0 mt-0">
         <v-row class="py-0 my-0" justify="center" align="center">
             <v-col md="12" sm="12" cols="12" class="py-0 my-0 mb-5 mt-5">
-              <h2 :class="this.$vuetify.theme.dark?'white--text':'grey--text text--darken-3'" class="google-font mb-5 mt-5">Our Schedule</h2>
+              <h2 :class="this.$vuetify.theme.dark?'white--text':'grey--text text--darken-3'" class="roboto-font mb-5 mt-5">Our Schedule</h2>
 
               <v-data-table
                   :mobile-breakpoint="0"
