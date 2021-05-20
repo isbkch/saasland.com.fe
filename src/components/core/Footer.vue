@@ -67,13 +67,13 @@
                 {{ item.linkname }}
             </v-btn>
             <v-spacer></v-spacer>
-           <span class="subtitle-2 roboto-font"> Based on Project
+           <span class="subtitle-2 roboto-font"> SaaS Builder - An
           <a
-            href="https://github.com/gdg-x/aura/"
+            href="#"
             target="_blank"
             rel="noreferrer"
             style="text-decoration:none"
-          > Aura</a></span>
+          > AWS</a> project</span>
           </v-toolbar>
         </v-col>
       </v-row>

@@ -44,12 +44,12 @@
     <template v-slot:append>
       <div class="pl-2">
         <p class="subtitle-2 roboto-font">
-          Based on Project
+          SaaS Builder - An
           <a
-            href="https://github.com/gdg-x/aura/"
+            href="#"
             target="_blank"
             style="text-decoration:none"
-          >Aura</a>
+          >AWS</a> project
         </p>
       </div>
     </template>

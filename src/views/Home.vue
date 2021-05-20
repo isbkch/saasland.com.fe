@@ -31,7 +31,7 @@
       <v-row
         justify="center"
         align="center"
-        style="background: #4c4a78"
+        style="background: #232F3E"
         class="py-5 my-0"
       >
         <v-col md="12" lg="10" sm="11" xs="12" class="py-0">
@@ -74,6 +74,7 @@
         </v-col>
       </v-row>
     </v-container>
+
     <v-container fluid class="pa-0 py-2 hidden-md-and-up">
       <v-row justify="center" align="center">
         <v-col md="12" lg="10" xs="12" class="py-0"> <br /><br /> </v-col>

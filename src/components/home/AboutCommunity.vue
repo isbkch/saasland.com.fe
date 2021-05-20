@@ -7,7 +7,7 @@
         lg="12"
         sm="12"
         class="pa-0"
-        style="color: white; background-color: #232F3E !important"
+        style="color: white;"
       >
         <div class="ma-1">
           <div class="pa-5">
