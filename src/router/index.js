@@ -164,15 +164,15 @@ const routes = [{
 //       color: '#0277bd',
 //     }
 //   },
-//   {
-//     path: '/blogs',
-//     name: 'Blogs',
-//     component: () => import( /* webpackChunkName: "blogs" */ '../views/Blogs.vue'),
-//     meta: {
-//       title: 'Blogs ',
-//       color: '#0277bd',
-//     }
-//   },
+  {
+    path: '/blogs',
+    name: 'Blogs',
+    component: () => import( /* webpackChunkName: "blogs" */ '../views/Blogs.vue'),
+    meta: {
+      title: 'Blogs ',
+      color: '#0277bd',
+    }
+  },
   {
     path: '*',
     name: 'redirect',
