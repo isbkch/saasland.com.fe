@@ -155,15 +155,15 @@ const routes = [{
       color: '#0277bd',
     }
   },
-//   {
-//     path: '/contact',
-//     name: 'Contact',
-//     component: () => import( /* webpackChunkName: "contact" */ '../views/Contact.vue'),
-//     meta: {
-//       title: 'Contact ',
-//       color: '#0277bd',
-//     }
-//   },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import( /* webpackChunkName: "contact" */ '../views/Contact.vue'),
+    meta: {
+      title: 'Contact ',
+      color: '#0277bd',
+    }
+  },
   {
     path: '/blogs',
     name: 'Blogs',

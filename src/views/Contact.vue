@@ -21,7 +21,10 @@
 </template>
 
 <script>
+
 import { mapState } from "vuex";
+import config from "@/assets/data/config.json";
+
 export default {
   components: {
     contactHeader:()=>import('@/components/contact/ContactHeader'),
@@ -32,6 +35,7 @@ export default {
   },
   data: () => ({
     loading:false,
+    config: config
   })
 };
 </script>
