@@ -8,9 +8,6 @@
     <v-row
       align="center"
       justify="center"
-      :style="{
-        'background-image': 'url(' + require('@/assets/img/svg/bg.svg') + ')',
-      }"
       style="background-position: right"
     >
       <v-col cols="12" md="12" lg="12" sm="12" class>

@@ -5,21 +5,17 @@
                 <p class="roboto-font mb-0" style="font-weight: 350;font-size:200%"><b>Our
                     <span style="color: #e76d0c;">Events</span> </b>
                 </p>
-                <p class="roboto-font mt-0 mb-0" style="font-size:110%">Questions? Please contact <a style="color:#1565C0;text-decoration: none;" :href="`mailto:${config.generalConfig.email}`">{{config.generalConfig.email}}</a></p>
+                <p class="roboto-font mt-0 mb-0" style="font-size:110%">Questions? Please contact <a style="color:#1565C0;text-decoration: none;" :href="`mailto:${data.email}`">{{data.email}}</a></p>
             </v-col>
         </v-row>
     </v-container>
 </template>
 
 <script>
-import { mapState } from "vuex";
+
 export default {
-    data() {
-        return {
-        }
-    },
-    computed:{
-        ...mapState(["config"])
-    },
+    props:['data'],
+        data:()=>({
+    })
 }
 </script>

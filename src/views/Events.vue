@@ -3,17 +3,17 @@
         <v-container fluid class="pa-0">
             <v-row justify="center" align="center" :class="this.$vuetify.theme.dark == true?'grey darken-4':'grey lighten-4'" class="py-0 my-0">
                 <v-col md="12" lg="10" sm="11" xs="12" class="py-3 my-0" >
-                    <eventsHeader />
-                    <upcomingMeetupsEvents v-if="checkExistance(config.keysandsecurity.meetup,0)" />
-                    <featureEvents v-else />
+                    <eventsHeader :data="config.generalConfig"/>
+                    <upcomingMeetupsEvents />
+                    <featureEvents />
                 </v-col>
             </v-row>
         </v-container>
         <v-container fluid class="pa-0 py-2" >
             <v-row justify="center" align="center">
                 <v-col md="12" lg="10" sm="11" xs="12" class="py-0" >
-                    <pastMeetupsEvents v-if="checkExistance(config.keysandsecurity.meetup,0)" />
-                    <customPastEvents v-else/>
+                    <pastMeetupsEvents />
+                    <customPastEvents/>
                 </v-col>
             </v-row>
         </v-container>
@@ -21,7 +21,9 @@
 </template>
 
 <script>
+
 import { mapState } from "vuex";
+import config from "@/assets/data/config.json";
 
 export default {
     components:{
@@ -35,7 +37,7 @@ export default {
         ...mapState(["config"])
     },
     data:()=>({
-
+        config: config
     })
 }
 </script>
