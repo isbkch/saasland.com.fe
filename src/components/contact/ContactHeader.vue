@@ -13,8 +13,7 @@
 <script>
 export default {
     props:['data'],
-    data:()=>({
-
+        data:()=>({
     })
 }
 </script>
