@@ -1,11 +1,11 @@
 [
-    {
-        "tag":"aws"
-    },
-    {
-        "tag":"saas"
-    },
-    {
-        "tag":"multitenant"
-    }
+  {
+    "tag": "aws"
+  },
+  {
+    "tag": "saas"
+  },
+  {
+    "tag": "multitenant"
+  }
 ]
