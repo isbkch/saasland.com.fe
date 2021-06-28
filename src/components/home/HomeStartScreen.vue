@@ -25,7 +25,7 @@
             <span style="color: #e76d0c;">together</span>.
           </b>
         </p>
-        <p class="roboto-font mt-0 mb-0" style="font-size:150%">{{config.generalConfig.name}}</p>
+        <p class="roboto-font mt-0 mb-0" style="font-size:150%">Get Me Started</p>
         <p class="roboto-font" style="font-size:100%">{{config.generalConfig.shortDescription}}</p>
         <p class="roboto-font" style="font-size:100%;color:#9e9e9e">
           <span v-for="(item,i) in hashtags" :key="i">
@@ -40,28 +40,58 @@
           </span>
         </p>
 
-        <v-btn
-          v-if="checkExistance(config.generalConfig.becomeMemberLink,0)"
-          :href="config.generalConfig.becomeMemberLink"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Become a Member"
-          class="ma-0 roboto-font elevation-1 primary mr-2"
-          style="text-transform: capitalize;border-radius:3px;color:white; border-color: #e76d0c #e15500 #e15500 !important; background-color: #ec7211 !important;"
-        >Become a Member</v-btn>
-        <v-btn
-          v-if="checkExistance(config.generalConfig.learnMoreLink,0)"
-          :href="config.generalConfig.learnMoreLink"
-          target="_blank"
-          aria-label="Learn More"
-          rounded
-          rel="noreferrer"
-          color="cyan"
-          style="text-transform: capitalize;border-radius:3px;text-transform: capitalize; border-color: #e76d0c #e15500 #e15500 !important; color: #000 !important"
-          outlined
-          class="ml-0"
-          dark
-        >Learn More</v-btn>
+        <v-row align="center" class="fill-height">
+            <v-col md="4" sm="6" cols="8" class>
+                <v-btn
+                    :href="config.generalConfig.becomeMemberLink"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="SaaS Newbie"
+                    x-large="true"
+                    class="ma-0 roboto-font elevation-1 primary mr-2"
+                    style="text-transform: capitalize;border-radius:3px;color:white; border-color: #e76d0c #e15500 #e15500 !important; background-color: #ec7211 !important;"
+                >
+                    I don't know where to start <br /> (SaaS Newbie)
+                </v-btn>
+            </v-col>
+            <v-col md="4" sm="6" cols="8" class>
+                <v-btn
+                    :href="config.generalConfig.becomeMemberLink"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="SaaS Consultant"
+                    x-large="true"
+                    class="ma-0 roboto-font elevation-1 primary mr-2"
+                    style="text-transform: capitalize;border-radius:3px;color:white; border-color: #e76d0c #e15500 #e15500 !important; background-color: #ec7211 !important;"
+                >I work with SaaS customers already :)<br>(SaaS Consultant)</v-btn>
+            </v-col>
+        </v-row>
+
+        <v-row align="center" class="fill-height">
+            <v-col md="4" sm="6" cols="8" class>
+                <v-btn
+                    :href="config.generalConfig.becomeMemberLink"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="SaaS Ops/DevOps"
+                    x-large="true"
+                    class="ma-0 roboto-font elevation-1 primary mr-2"
+                    style="text-transform: capitalize;border-radius:3px;color:white; border-color: #e76d0c #e15500 #e15500 !important; background-color: #ec7211 !important;"
+                >I need help keeping the lights on !?! <br>(SaaS Ops/DevOps)</v-btn>
+            </v-col>
+            <v-col md="4" sm="6" cols="8" class>
+                <v-btn
+                    :href="config.generalConfig.becomeMemberLink"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Experienced SaaS Architect/Builder"
+                    x-large="true"
+                    class="ma-0 roboto-font elevation-1 primary mr-2"
+                    style="text-transform: capitalize;border-radius:3px;color:white; border-color: #e76d0c #e15500 #e15500 !important; background-color: #ec7211 !important;"
+                >Just show me the code already<br>(Experienced SaaS Architect/Builder)</v-btn>
+            </v-col>
+        </v-row>
+        <br>
       </v-col>
     </v-row>
   </v-container>
