@@ -21,24 +21,24 @@ const routes = [{
       color: '#0277bd',
     }
   },
-//   {
-//     path: '/team',
-//     name: 'Team',
-//     component: () => import( /* webpackChunkName: "team" */ '../views/Team.vue'),
-//     meta: {
-//       title: 'Team ',
-//       color: '#0277bd',
-//     }
-//   },
-//   {
-//     path: '/team/:id',
-//     name: 'Team Details',
-//     component: () => import( /* webpackChunkName: "team-details" */ '../views/Team/TeamDetails.vue'),
-//     meta: {
-//       title: 'Team Details',
-//       color: '#0277bd',
-//     }
-//   },
+  {
+    path: '/team',
+    name: 'Team',
+    component: () => import( /* webpackChunkName: "team" */ '../views/Team.vue'),
+    meta: {
+      title: 'Team ',
+      color: '#0277bd',
+    }
+  },
+  {
+    path: '/team/:id',
+    name: 'Team Details',
+    component: () => import( /* webpackChunkName: "team-details" */ '../views/Team/TeamDetails.vue'),
+    meta: {
+      title: 'Team Details',
+      color: '#0277bd',
+    }
+  },
   {
     path: '/events',
     name: 'Events',

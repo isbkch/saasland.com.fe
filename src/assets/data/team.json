@@ -1,0 +1,96 @@
+{
+  "OrganizingTeam": [
+    {
+      "image": "http://dddddd",
+      "name": "Member 1",
+      "designation": "we're all part",
+      "bio": "we're all part of the same community, so be friendly, welcoming, and generally a nice person. be someone that other people want to be around.",
+      "socialLinks": {
+        "twitter": "#",
+        "github": "#",
+        "linkedin": "#",
+        "youtube": "#"
+      }
+    },
+    {
+      "image": "http://dddddd",
+      "name": "Member 2",
+      "designation": "we're all part",
+      "bio": "we're all part of the same community, so be friendly, welcoming, and generally a nice person. be someone that other people want to be around.",
+      "socialLinks": {
+        "twitter": "#",
+        "github": "#",
+        "linkedin": "#",
+        "youtube": "#"
+      }
+    },
+    {
+      "image": "http://dddddd",
+      "name": "Member 3",
+      "designation": "we're all part",
+      "bio": "we're all part of the same community, so be friendly, welcoming, and generally a nice person. be someone that other people want to be around.",
+      "socialLinks": {
+        "twitter": "#",
+        "github": "#",
+        "linkedin": "#",
+        "youtube": "#"
+      }
+    }
+  ],
+
+  "CoreTeam": [
+    {
+      "image": "https://media-exp3.licdn.com/dms/image/C5603AQG9ejt00dvIuA/profile-displayphoto-shrink_200_200/0/1516260337859?e=1630540800&v=beta&t=HNUba7eGQjv-p2U_HAwJ2vw8ODVLeH8fusaLno_nj44",
+      "name": "Tod Golding",
+      "designation": "Principal Cloud Architect, Global SaaS Tech Lead at AWS",
+      "bio": "we're all part of the same community, so be friendly, welcoming, and generally a nice person. be someone that other people want to be around.",
+      "socialLinks": {
+        "linkedin": "https://www.linkedin.com/in/tod-golding-0ba35b2/"
+      }
+    },
+    {
+      "image": "https://media-exp3.licdn.com/dms/image/C5603AQH7Ref4SDWL5g/profile-displayphoto-shrink_200_200/0/1533174409406?e=1630540800&v=beta&t=UR0WcfE9CDNUGFepE363CJk-vRimAtq3BpGNpcKkZxs",
+      "name": "Tony Colantonio",
+      "designation": "National Segment Leader, Solutions Architecture at AWS",
+      "bio": "we're all part of the same community, so be friendly, welcoming, and generally a nice person. be someone that other people want to be around.",
+      "socialLinks": {
+        "linkedin": "https://www.linkedin.com/in/tony-colantonio/"
+      }
+    },
+    {
+      "image": "https://media-exp3.licdn.com/dms/image/C4E03AQF7P70S0wI7SA/profile-displayphoto-shrink_200_200/0/1516934374575?e=1630540800&v=beta&t=bSPaF6jzcWJjXidg42QvSe5tWQggb59C5FkWIID4R4w",
+      "name": "Vijay Niles",
+      "designation": "Senior Solutions Architect at Amazon Web Services",
+      "bio": "we're all part of the same community, so be friendly, welcoming, and generally a nice person. be someone that other people want to be around.",
+      "socialLinks": {
+        "twitter": "#",
+        "github": "#",
+        "linkedin": "https://www.linkedin.com/in/vijay-niles/"
+      }
+    },
+    {
+      "image": "https://media-exp3.licdn.com/dms/image/C4D03AQGET0IEmhnL8Q/profile-displayphoto-shrink_200_200/0/1620045977260?e=1630540800&v=beta&t=osk3VVplb5FbgG-S4ZbeOEnGUWirjcXWf1lRsh6q3tc",
+      "name": "iLyas Bakouch",
+      "designation": "we're all part",
+      "bio": "we're all part of the same community, so be friendly, welcoming, and generally a nice person. be someone that other people want to be around.",
+      "socialLinks": {
+        "twitter": "https://twitter.com/isbkch",
+        "github": "https://github.com/isbkch",
+        "linkedin": "https://www.linkedin.com/in/ilyasbakouch/"
+      }
+    }
+  ],
+  "Volunteers": [
+    {
+      "image": "https://media-exp3.licdn.com/dms/image/C4D03AQGET0IEmhnL8Q/profile-displayphoto-shrink_200_200/0/1620045977260?e=1630540800&v=beta&t=osk3VVplb5FbgG-S4ZbeOEnGUWirjcXWf1lRsh6q3tc",
+      "name": "iLyas Bakouch",
+      "designation": "we're all part",
+      "bio": "we're all part of the same community, so be friendly, welcoming, and generally a nice person. be someone that other people want to be around.",
+      "socialLinks": {
+        "twitter": "https://twitter.com/isbkch",
+        "github": "https://github.com/isbkch",
+        "linkedin": "https://www.linkedin.com/in/ilyasbakouch/"
+      }
+    }
+  ]
+}

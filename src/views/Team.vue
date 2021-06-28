@@ -3,15 +3,15 @@
         <v-container fluid class="pa-0">
              <v-row justify="center" align="center" class="py-3" :class="this.$vuetify.theme.dark == true?'grey darken-4':'grey lighten-4'" >
                 <v-col md="12" lg="10" sm="11" xs="12" class="pt-3 bottom-space"  >
-                  <TeamHeader :data="CoreTeam" />
+                  <TeamHeader :data="team.CoreTeam" />
                 </v-col>
              </v-row>
         </v-container>
 
         <v-container fluid class="pa-0">
              <v-row justify="center" align="center" class="py-3" :class="this.$vuetify.theme.dark == true?'black':''">
-                <v-col md="12" lg="10" sm="11" xs="12" class="pt-3 card-top-margin" v-if="CoreTeam.length>0"  >
-                  <CoreTeam :data="CoreTeam"/>
+                <v-col md="12" lg="10" sm="11" xs="12" class="pt-3 card-top-margin" v-if="team.CoreTeam.length>0"  >
+                  <CoreTeam :data="team.CoreTeam"/>
                 </v-col>
                 <v-col v-if="loader" md="12" lg="10" xs="12" class="pt-3 card-top-margin"  >
                   <v-container fluid class="">
@@ -34,16 +34,16 @@
              </v-row>
         </v-container>
 
-        <v-container fluid class="pa-0" v-if="OrganizingTeam.length>0">
+        <v-container fluid class="pa-0" v-if="team.OrganizingTeam.length>0">
              <v-row justify="center" align="center" class="py-3">
                 <v-col md="12" lg="10" sm="11" xs="12" class="pt-3 ">
-                  <OrgainizingTeam :data="OrganizingTeam"/>
+                  <OrgainizingTeam :data="team.OrganizingTeam"/>
                 </v-col>
              </v-row>
         </v-container>
         <v-container fluid class="pa-0">
              <v-row justify="center" align="center" class="py-3" :class="this.$vuetify.theme.dark == true?'black':''">
-               <v-col v-if="!loader && notFound && OrganizingTeam.length <=0 && CoreTeam.length<=0" md="12" lg="12" sm="12" cols="12" class="text-center">
+               <v-col v-if="!loader && notFound && team.OrganizingTeam.length <=0 && team.CoreTeam.length<=0" md="12" lg="12" sm="12" cols="12" class="text-center">
                 <v-img
                   :src="require('@/assets/img/svg/DataNotFound.svg')"
                   :lazy-src="require('@/assets/img/svg/DataNotFound.svg')"
@@ -66,7 +66,9 @@
 </template>
 
 <script>
-import service from '@/services/appservices'
+import service from '@/services/appservices';
+import team from "@/assets/data/team.json";
+
 export default {
     name:'Team',
     inject: ['theme'],
@@ -76,38 +78,11 @@ export default {
         OrgainizingTeam:()=>import('@/components/team/OrganizingTeam')
     },
     data:() =>({
-      loader:true,
-      OrganizingTeam:[],
-      CoreTeam:[],
-      Volunteers:[],
+      loader:false,
+      team: team,
       notFound:false,
       ErrorMsg:''
     }),
-    mounted(){
-        this.getAllTeamMembers()
-    },
-    methods:{
-        getAllTeamMembers(){
-          this.loader = true
-          service.getTeam().then(res=>{
-            if(res.success==true){
-              this.OrganizingTeam = res.data.filter(res=>res.role=='Organizing Team' && res.visible )
-              this.CoreTeam = res.data.filter(res=>res.role=='Core Team' && res.visible )
-              this.Volunteers = res.data.filter(res=>res.role=='Volunteer' && res.visible )
-              this.loader = false
-              this.notFound = false
-            }else{
-              this.notFound = true
-              this.loader = false
-            }
-          }).catch(e=>{
-            this.loader = false
-            this.notFound = true
-            this.ErrorMsg = e
-          })
-        }
-    }
-
 }
 </script>
 

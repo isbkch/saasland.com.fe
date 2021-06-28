@@ -5,8 +5,8 @@
                 <p class="roboto-font mb-0" style="font-weight: 350;font-size:200%"><b>
                     <span style="color: #e76d0c;">Our</span> Team </b>
                 </p>
-                <p class="roboto-font mt-0 hidden-sm-and-down">Google is known all around the world. Everyone is 'googling', checking on 'maps' and communicating in 'gmail'. For simple users, they are services that just works, but not for us. Developers see much more: APIs, scalability issues, complex technology stacks. And that is what GDG is about.</p>
-                <p class="roboto-font mt-0 ">Our goal is to organize space to connect the best industry experts with Indian audience to boost development of IT. And Our Core Team is:</p>
+                <p class="roboto-font mt-0 hidden-sm-and-down">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim, arcu eu ultrices blandit, felis ante cursus velit, a varius libero nisl in velit. Vivamus mollis auctor mauris ut porttitor. Ut vulputate felis ut eros imperdiet, at porta augue aliquam. Pellentesque pretium diam eu mi dictum, posuere feugiat ligula lobortis. Nam cursus nisl at velit mattis, vel tincidunt tellus sagittis.</p>
+                <p class="roboto-font mt-0 ">Ut vulputate felis ut eros imperdiet, at porta augue aliquam. Pellentesque pretium diam eu mi dictum, posuere feugiat ligula lobortis. And Our Core Team is:</p>
 
             </v-col>
         </v-row>
