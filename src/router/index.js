@@ -12,15 +12,15 @@ const routes = [{
       color: '#0277bd',
     }
   },
-//   {
-//     path: '/about',
-//     name: 'About',
-//     component: () => import( /* webpackChunkName: "about" */ '../views/About.vue'),
-//     meta: {
-//       title: 'About ',
-//       color: '#0277bd',
-//     }
-//   },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import( /* webpackChunkName: "about" */ '../views/About.vue'),
+    meta: {
+      title: 'About ',
+      color: '#0277bd',
+    }
+  },
 //   {
 //     path: '/team',
 //     name: 'Team',

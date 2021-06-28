@@ -7,7 +7,7 @@
         </v-row>
         <v-row class="py-0 my-0">
             <v-col md="8" sm="12" cols="12" class="py-0 my-0">
-                <p class="roboto-font" style="font-size:110%">{{data}}</p>
+                <p class="roboto-font" style="font-size:110%">{{data.codeOfConduct}}</p>
             </v-col>
 
         </v-row>

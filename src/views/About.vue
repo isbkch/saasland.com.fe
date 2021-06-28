@@ -25,7 +25,7 @@
         class="py-5"
       >
         <v-col md="11" lg="10" sm="11" xs="12" class="py-0">
-          <communityGuidelines :data="communityGudielines" />
+          <communityGuidelines :data="config" />
         </v-col>
       </v-row>
     </v-container>
@@ -33,7 +33,7 @@
     <v-container fluid class="pa-0 py-0 my-0">
       <v-row justify="center" align="center" class="py-5">
         <v-col md="11" lg="10" sm="11" xs="12" class="py-0 mb-5">
-          <coc :data="coc" />
+          <coc :data="config" />
           <antiHarassmentPolicy :data="config.generalConfig.shortName || config.generalConfig.name" />
         </v-col>
       </v-row>
@@ -43,6 +43,7 @@
 
 <script>
 import service from "@/services/appservices";
+import config from "@/assets/data/config.json";
 import { mapState } from "vuex";
 
 export default {
@@ -58,21 +59,7 @@ export default {
   },
   data: () => ({
     loading: true,
-    communityGudielines: [],
-    coc: ""
-  }),
-  mounted() {
-    this.getCommunityGuidelinesData();
-  },
-  methods: {
-    getCommunityGuidelinesData() {
-      service.getCommunityGuidelines().then(res => {
-        if (res.success) {
-          this.coc = res.data.codeOfConduct;
-          this.communityGudielines = res.data.communityGuidelines;
-        }
-      });
-    }
-  }
+    config: config,
+  })
 };
 </script>
