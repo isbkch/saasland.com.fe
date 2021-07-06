@@ -6,7 +6,7 @@
         <p
           class="roboto-font mt-0"
           style="font-size:95%"
-        >SaaS Builder is for developers who are interested in building and deploying SaaS workloads on AWS.</p>
+        >SaaS Builder is for developers who are interested in building and deploying SaaS Solutions.</p>
         <p class="roboto-font" style="font-size:95%">We leverage different AWS technologies</p>
         <span v-for="(item,i) in whatwedodata" :key="i">
           <v-tooltip bottom>
