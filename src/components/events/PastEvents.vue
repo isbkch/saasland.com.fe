@@ -26,7 +26,6 @@
 
                 </v-row>
 
-
                 <v-data-table
                     class="mt-3"
                     :search="search"
